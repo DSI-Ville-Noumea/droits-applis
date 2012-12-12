@@ -1,0 +1,30 @@
+
+<project name="Droits-Applis - Gestion des droits des utilisateurs pour les applications">
+	<bannerLeft>
+		<name>DSI - Mairie de Nouméa</name>
+		<src>img/DSI-logo-blason-or.png</src>
+		<href>http://svpsp/dsi/Pages/Accueil.aspx</href>
+		<alt>http://svpsp/dsi/Pages/Accueil.aspx</alt>
+	</bannerLeft>
+	
+    <publishDate position="right"/>
+    <version position="right"/>
+    
+    <skin>
+		<groupId>org.apache.maven.skins</groupId>
+		<artifactId>maven-stylus-skin</artifactId>
+		<version>1.4</version>
+	</skin>
+
+    <body>
+        <links>
+            <item name="Référence APT" href="references/format.html"/>
+        </links>
+
+        <breadcrumbs>
+            <item name="Accueil" href="home.html"/>
+        </breadcrumbs>
+
+        <menu ref="reports"/>
+    </body>
+</project>

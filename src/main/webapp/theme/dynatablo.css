@@ -1,0 +1,120 @@
+/* Scrollable Content Height */
+.scrollContent {
+ height:100px;
+ overflow-x:hidden;
+ overflow-y:auto;
+}
+
+.scrollContent tr {
+ height: auto;
+ white-space: nowrap;
+}
+
+/* Prevent Mozilla scrollbar from hiding right-most cell content */
+.scrollContent tr td:last-child {
+ padding-right: 20px;
+}
+
+/* Fixed Header Height */
+.fixedHeader tr {
+/* position: relative;*/
+ height: auto;
+/* width: 900px;*/
+ /* this fixes IE header jumping bug when mousing over rows in the tbody */
+ top: expression( this.parentNode.parentNode.parentNode.scrollTop + 'px' );
+ /*z-index:0; */
+/* max-width: 900px;*/
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;/
+}
+
+/* Put border around entire table */
+div.TableContainer {
+ border: 1px solid #7DA87D;
+ overflow-y:auto;
+  overflow-x:auto;
+  z-index:10; 
+}
+
+/* Table Header formatting */
+.headerFormat {
+ background-color: white;
+ color: #FFFFFF;
+ margin: 3px;
+ padding: 1px;
+ white-space: nowrap;
+ font-family: Helvetica;
+ font-size: 14px;
+ text-decoration: none;
+ font-weight: bold;
+}
+.headerFormat tr td {
+ border: 1px solid #000000;
+ background-color: #7DA87D;
+}
+
+/* Table Body (Scrollable Content) formatting */
+.bodyFormat tr td {
+	color: #000000;
+	margin: 3px;
+	padding: 1px;
+	border: 0px none;
+	font-family: Helvetica;
+	font-size: 12px;
+}
+
+/* Use to set different color for alternating rows */
+.alternateRow {
+  background-color: #E0F1E0;
+}
+
+/* Styles used for SORTING */
+.point {
+ cursor:pointer;
+ /*width: 40px;*/
+ width: expression(this.width > 40 ? "40px": "auto");
+}
+
+td.sortedColumn {
+  background-color: #E0F1E0;
+}
+
+tr.alternateRow td.sortedColumn {
+  background-color: #c5e5c5;
+}
+
+.total {
+	background-color: #FED362;
+	color: #000000;
+	white-space: nowrap;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+table.scrollTable tr:hover {
+	background-color: #c5e5c5;
+	color: #006600;
+    /*	font-style: normal; */
+	/* text-decoration: underline overline; */
+	/* overflow:scroll; */
+	 /*z-index:7; */
+}
+
+.hoverMe {
+	background-color: #c5e5c5;
+	color: #006600;
+	/* font-style: normal; */
+	/* text-decoration: underline overline; */
+}
+
+/* [if IE]>
+<style type="text/css"> */
+/* IE Specific Style addition to constrain table from automatically growing in height */
+/* div.TableContainer {
+ height: 121px; 
+ overflow-x:hidden;
+ overflow-y:auto;
+}
+</style>
+<![endif] */
