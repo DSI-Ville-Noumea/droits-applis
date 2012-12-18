@@ -9,10 +9,10 @@ import nc.mairie.technique.Transaction;
 public class CompteGroupe extends nc.mairie.technique.BasicMetier {
 	
 	/** A REMPLIR. */
-	private String cdidut;
+	public String cdidut;
 	
 	/** A REMPLIR. */
-	private String cdgrou;
+	public String cdgrou;
 	
 /**
  * Constructeur CompteGroupe.

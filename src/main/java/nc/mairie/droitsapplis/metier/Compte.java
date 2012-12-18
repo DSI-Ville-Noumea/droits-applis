@@ -9,13 +9,13 @@ import nc.mairie.technique.Transaction;
 public class Compte extends nc.mairie.technique.BasicMetier {
 	
 	/** A REMPLIR. */
-	private String cdidut;
+	public String cdidut;
 	
 	/** A REMPLIR. */
-	private String liidut;
+	public String liidut;
 	
 	/** A REMPLIR. */
-	private String printer;
+	public String printer;
 	
 /**
  * Constructeur Compte.
