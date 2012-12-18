@@ -5,6 +5,9 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="framework-1.0.3.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/framework-1.0.3/framework-1.0.3">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="droits-applis"/>
         <property name="java-output-path" value="/droits-applis/target/classes"/>
     </wb-module>
