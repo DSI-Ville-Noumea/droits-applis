@@ -1,14 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%-- jsf:pagecode language="java" location="/src/pagecode/GestionDroits.java" --%><%-- /jsf:pagecode --%>
-<%@page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+
 <html>
 <head>
 <link rel="stylesheet" href="theme/Master.css" type="text/css">
 <LINK href="theme/sigp2.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="theme/dynatablo.css" type="text/css"> 
 <title>Gestion des Droits</title>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html">
 <meta name="GENERATOR" content="Rational Application Developer">
 <script type="text/JavaScript" src="js/sortTable.js"></script>
 <script type="text/JavaScript" src="js/dynatablo.js"></script>
@@ -17,7 +16,7 @@
 	<body>
 	<FORM name="formu" method="POST">
 <%@ include file="BanniereErreur.jsp" %>
-<table cellpadding="0" cellspacing="0" border="0" align="center"><tr><td class="TitreDroits">Un Droit appartient à une application et est associé à plusieurs Groupes.</td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0" align="center"><tr><td class="TitreDroits">Un Droit appartient Ã  toto une application et est associÃ© Ã  plusieurs Groupes.</td></tr></table>
 <table cellpadding="0" cellspacing="0" border="0" align="center"><tr><td><div id="TableContainer" class="TableContainer" style="overflow: auto;height:500px;width:900px;">
 <%= process.generateTABLO_DROITS() %> 
 </div></td></tr></table>

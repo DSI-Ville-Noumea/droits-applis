@@ -1,10 +1,10 @@
-package nc.mairie.droitsapplis.metier;
+ï»¿package nc.mairie.droitsapplis.metier;
 
 import nc.mairie.technique.BasicBroker;
 import nc.mairie.technique.Transaction;
 
 /**
- * Objet métier CompteGroupe.
+ * Objet mÃ©tier CompteGroupe.
  */
 public class CompteGroupe extends nc.mairie.technique.BasicMetier {
 	
@@ -58,7 +58,7 @@ public final void setCdgrou(final String newCdgrou) {
 }
 
 /**
- * Methode à définir dans chaque objet Métier pour instancier un Broker.
+ * Methode Ã  dÃ©finir dans chaque objet MÃ©tier pour instancier un Broker.
  * 
  * @return une instance de BasicBroker
  */
@@ -67,7 +67,7 @@ protected final BasicBroker definirMyBroker() {
 }
 
 /**
- * Methode à définir dans chaque objet Métier pour instancier un Broker.
+ * Methode Ã  dÃ©finir dans chaque objet MÃ©tier pour instancier un Broker.
  * 
  * @return une instance de BasicBroker
  */
@@ -76,16 +76,16 @@ protected final CompteGroupeBroker getMyCompteGroupeBroker() {
 }
 
 /**
-* Renvoie une chaîne correspondant à la valeur de cet objet.
-* @return une représentation sous forme de chaîne du destinataire
+* Renvoie une chaÃ®ne correspondant Ã  la valeur de cet objet.
+* @return une reprÃ©sentation sous forme de chaÃ®ne du destinataire
 */
 public final String toString() {
-	// Insérez ici le code pour finaliser le destinataire
-	// Cette implémentation transmet le message au super. Vous pouvez remplacer ou compléter le message.
+	// InsÃ©rez ici le code pour finaliser le destinataire
+	// Cette implÃ©mentation transmet le message au super. Vous pouvez remplacer ou complÃ©ter le message.
 	return super.toString();
 }
 /**
- * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * Retourne un ArrayList d'objet mÃ©tier : CompteGroupe.
  * @return java.util.ArrayList
  */
 public static java.util.ArrayList listerCompteGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception{
@@ -94,7 +94,7 @@ public static java.util.ArrayList listerCompteGroupe(nc.mairie.technique.Transac
 }
 
 /**
- * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * Retourne un ArrayList d'objet mÃ©tier : CompteGroupe.
  * @return java.util.ArrayList
  */
 public static java.util.ArrayList listerCompteGroupe(nc.mairie.technique.Transaction aTransaction, String sCompte) throws Exception{
@@ -103,7 +103,7 @@ public static java.util.ArrayList listerCompteGroupe(nc.mairie.technique.Transac
 }
 
 /**
- * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * Retourne un ArrayList d'objet mÃ©tier : CompteGroupe.
  * @return java.util.ArrayList
  */
 public static java.util.ArrayList listerCompteGroupefromGroupe(nc.mairie.technique.Transaction aTransaction, String sGroupe) throws Exception{
@@ -115,8 +115,8 @@ public static java.util.ArrayList listerCompteGroupefromGroupe(nc.mairie.techniq
  * Retourne un CompteGroupe.
  * 
  * @param aTransaction la transaction en cours
- * @param code code du compte recherché
- * @return le groupe recherché
+ * @param code code du compte recherchÃ©
+ * @return le groupe recherchÃ©
  * @throws Exception 
  */
 public static CompteGroupe chercherCompteGroupe(final Transaction aTransaction, final String code) throws Exception {
@@ -130,7 +130,7 @@ public static CompteGroupe chercherCompteGroupe(final Transaction aTransaction, 
  * @param aTransaction la transaction en cours
  * @param sCompte le nom du compte
  * @param cdGrou le code du groupe
- * @return le CompteGroupe cherché
+ * @return le CompteGroupe cherchÃ©
  * @throws Exception 
  */
 public static CompteGroupe chercherCompteGroupe(final Transaction aTransaction, final String sCompte, final String cdGrou) throws Exception {

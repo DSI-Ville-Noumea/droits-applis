@@ -1,7 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%-- jsf:pagecode language="java" location="/src/pagecode/GestionDroitAvance.java" --%><%-- /jsf:pagecode --%>
-<%@page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+
 <%@page import="nc.mairie.droitsapplis.process.GestionDroitAvance"%>
 <%@page import="nc.mairie.droitsapplis.process.GestionDroits"%>
 <html>
@@ -10,7 +9,7 @@
 <LINK href="theme/sigp2.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="theme/dynatablo.css" type="text/css"> 
 <title>Gestion des Droits</title>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html">
 <meta name="GENERATOR" content="Rational Application Developer">
 <script type="text/JavaScript" src="js/sortTable.js"></script>
 
@@ -26,7 +25,7 @@
 	<tr>
 		<td align="center"><br>
 		<span class="TitreDroits">Etes-vous sur de vouloir supprimer le droit <span class="TitreDroitsLbl"><%=process.getVAL_ST_NOM()%></span>
-		ainsi que tous ses groupes associés ? <br>
+		ainsi que tous ses groupes associÃ©s ? <br>
 		</span>
 		<br>
 		<%
@@ -51,7 +50,7 @@
 		<br>
 		<TABLE>
 			<TR>
-				<TD width="119" valign="bottom" class="sigp2">Nom (identique à celui défini dans l'application) :</TD>
+				<TD width="119" valign="bottom" class="sigp2">Nom (identique Ã  celui dÃ©fini dans l'application) :</TD>
 				<TD><INPUT class="sigp2-saisie" maxlength="50"
 					name="<%= process.getNOM_EF_NOM() %>" size="50" type="text"
 					value="<%= process.getVAL_EF_NOM() %>"></TD>
@@ -62,14 +61,14 @@
 					name="<%= process.getNOM_LB_APPLICATION() %>">
 					<%=process.forComboHTML(process.getVAL_LB_APPLICATION(),
 								process.getVAL_LB_APPLICATION_SELECT())%>
-				</SELECT> <span class="sigp2">&nbsp; ou en définir une nouvelle :&nbsp;</span> <INPUT class="sigp2-saisie"
+				</SELECT> <span class="sigp2">&nbsp; ou en dÃ©finir une nouvelle :&nbsp;</span> <INPUT class="sigp2-saisie"
 					maxlength="50" name="<%= process.getNOM_EF_APPLICATION() %>"
 					size="25" type="text"
 					value="<%= process.getVAL_EF_APPLICATION() %>"></TD>
 			</TR>
 		</TABLE>
 		<br>
-		<span class="TitreDroits">Les Groupes associés au droit <span class="TitreDroitsLbl"><%=process.getVAL_ST_NOM()%></span></span>
+		<span class="TitreDroits">Les Groupes associÃ©s au droit <span class="TitreDroitsLbl"><%=process.getVAL_ST_NOM()%></span></span>
 		<br>
 		<TABLE class="sigp2">
 			<TR>
@@ -104,7 +103,7 @@
 				%>
 				<TD width="40%">
 				<FIELDSET><LEGEND class="sigp2Fieldset" align="left">Groupes
-				associés à ce droit</LEGEND>
+				associÃ©s Ã  ce droit</LEGEND>
 				<TABLE border="0" class="sigp2" width="100%">
 					<TR>
 						<TD align="left" width="100%"><SELECT size="10"

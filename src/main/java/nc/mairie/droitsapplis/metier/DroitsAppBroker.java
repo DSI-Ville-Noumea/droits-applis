@@ -1,8 +1,8 @@
-package nc.mairie.droitsapplis.metier;
+ï»¿package nc.mairie.droitsapplis.metier;
 
 import nc.mairie.technique.BasicRecord;
 /**
- * Broker de l'Objet métier DroitsApp
+ * Broker de l'Objet mÃ©tier DroitsApp
  */
 public class DroitsAppBroker extends nc.mairie.technique.BasicBroker {
 /**
@@ -34,7 +34,7 @@ protected java.lang.String definirNomTable() {
  */
 protected java.util.Hashtable definirMappageTable() throws NoSuchFieldException {
 	java.util.Hashtable mappage = new java.util.Hashtable();
-	mappage.put("CDDRAP", new BasicRecord("CDDRAP", "INTEGER", getMyDroitsApp().getClass().getField("cddrap"), "STRING"));
+	mappage.put("CDDRAP", new BasicRecord("CDDRAP", "INTEGER", getMyDroitsApp().getClass().getField("cddrap"), "IDENTITY"));
 	mappage.put("APPLICATION", new BasicRecord("APPLICATION", "CHAR", getMyDroitsApp().getClass().getField("application"), "STRING"));
 	mappage.put("DROIT", new BasicRecord("DROIT", "CHAR", getMyDroitsApp().getClass().getField("droit"), "STRING"));
 	return mappage;
@@ -61,7 +61,7 @@ public boolean supprimerDroitsApp(nc.mairie.technique.Transaction aTransaction) 
 	return supprimer(aTransaction);
 }
 /**
- * Retourne un ArrayList d'objet métier : DroitsApp.
+ * Retourne un ArrayList d'objet mÃ©tier : DroitsApp.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList listerDroitsApp(nc.mairie.technique.Transaction aTransaction) throws Exception {
@@ -75,7 +75,7 @@ public java.util.ArrayList<DroitsApp> listerDroitsAppfromCompteAndApplication(nc
 }
 
 /**
- * Retourne un ArrayList d'objet métier : DroitsApp.
+ * Retourne un ArrayList d'objet mÃ©tier : DroitsApp.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList listerApplications(nc.mairie.technique.Transaction aTransaction) throws Exception {
@@ -90,9 +90,5 @@ public DroitsApp chercherDroitsApp(nc.mairie.technique.Transaction aTransaction,
 	return (DroitsApp)executeSelect(aTransaction,"select * from "+getTable()+" where CDDRAP = "+cdDrap+"");
 }
 
-public int nouvId(nc.mairie.technique.Transaction aTransaction) throws Exception{
-//	recherche du dernier 
-	return executeCompter(aTransaction, "select max(cddrap) from "+ getTable());
-	
-}
+
 }

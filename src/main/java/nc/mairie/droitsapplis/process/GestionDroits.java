@@ -1,4 +1,4 @@
-package nc.mairie.droitsapplis.process;
+ï»¿package nc.mairie.droitsapplis.process;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -11,8 +11,8 @@ import nc.mairie.droitsapplis.metier.GroupeDroits;
 import nc.mairie.technique.*;
 /**
  * Process GestionDroits
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
 */
 public class GestionDroits extends nc.mairie.technique.BasicProcess {
 	public static final int STATUT_EDITDROIT=1;
@@ -31,12 +31,12 @@ public class GestionDroits extends nc.mairie.technique.BasicProcess {
 	
 	
 /**
- * Initialisation des zones à afficher dans la JSP
+ * Initialisation des zones Ã  afficher dans la JSP
  * Alimentation des listes, s'il y en a, avec setListeLB_XXX()
  * ATTENTION : Les Objets dans la liste doivent avoir les Fields PUBLIC
- * Utilisation de la méthode addZone(getNOMxxx, String);
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Utilisation de la mÃ©thode addZone(getNOMxxx, String);
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public void initialiseZones(javax.servlet.http.HttpServletRequest request) throws Exception{
 	//System.out.println("PASS initZone GestionDroits");
@@ -59,20 +59,20 @@ public synchronized void initialiseHashMap(javax.servlet.http.HttpServletRequest
 	hTMapDroits=new HashMap<String, boolean[]>();
 	boolean[] tabBooGroupes;
 	
-	//On initialise la hMapDroits avec tous les droits trouvés
+	//On initialise la hMapDroits avec tous les droits trouvÃ©s
 	for(DroitsApp daCourant : listDroits){
 		tabBooGroupes=new boolean[listeGroupes.size()];
 		java.util.Arrays.fill(tabBooGroupes, false);
 		hTMapDroits.put(daCourant.getCddrap(),tabBooGroupes);
 	}
 
-	//on boucle sur la liste complète des droitsgroupe (SIGRAP)
+	//on boucle sur la liste complÃ¨te des droitsgroupe (SIGRAP)
 	for(GroupeDroits gdCourant : listeGroupesDroits){
 		//System.out.println("GROU="+gdCourant.getCdgrou()+" CDDRAP="+gdCourant.getCddrap());
 		String droitCourant=gdCourant.getCddrap();
 		//tabBooGroupes=new boolean[listeGroupes.size()];
 		tabBooGroupes=hTMapDroits.get(droitCourant);
-		//on rempli à true lorsqu'on tombe sur le bon groupe, l'ordre des groupes est important
+		//on rempli Ã  true lorsqu'on tombe sur le bon groupe, l'ordre des groupes est important
 		//il faut penser comme une matrice
 		for(int j=0; j<listeGroupes.size(); j++){
 			Groupe gCourant=listeGroupes.get(j);
@@ -86,10 +86,10 @@ public synchronized void initialiseHashMap(javax.servlet.http.HttpServletRequest
 
 
 /**
- * Méthode appelée par la servlet qui aiguille le traitement : 
+ * MÃ©thode appelÃ©e par la servlet qui aiguille le traitement : 
  * en fonction du bouton de la JSP 
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean recupererStatut(javax.servlet.http.HttpServletRequest request) throws Exception{
 
@@ -117,23 +117,23 @@ public boolean recupererStatut(javax.servlet.http.HttpServletRequest request) th
 		}
 
 	}
-	//Si TAG INPUT non géré par le process
+	//Si TAG INPUT non gÃ©rÃ© par le process
 	setStatut(STATUT_MEME_PROCESS);
 	return true;
 }
 /**
  * Constructeur du process GestionDroits.
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public GestionDroits() {
 	super();
 }
 /**
  * Retourne le nom de la JSP du process
- * Zone à utiliser dans un champ caché dans chaque formulaire de la JSP.
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Zone Ã  utiliser dans un champ cachÃ© dans chaque formulaire de la JSP.
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public String getJSP() {
 	return "GestionDroits.jsp";
@@ -141,19 +141,19 @@ public String getJSP() {
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_AJOUTER
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_AJOUTER() {
 	return "NOM_PB_AJOUTER";
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_AJOUTER(javax.servlet.http.HttpServletRequest request) throws Exception {
 
@@ -165,19 +165,19 @@ public boolean performPB_AJOUTER(javax.servlet.http.HttpServletRequest request) 
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_ANNULER
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_ANNULER() {
 	return "NOM_PB_ANNULER";
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	setStatut(STATUT_RETOUR);
@@ -186,19 +186,19 @@ public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) 
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_MODIFIER
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_MODIFIER() {
 	return "NOM_PB_MODIFIER";
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_MODIFIER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	
@@ -215,19 +215,19 @@ public boolean performPB_MODIFIER(javax.servlet.http.HttpServletRequest request)
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_SUPPRIMER
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_SUPPRIMER() {
 	return "NOM_PB_SUPPRIMER";
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_SUPPRIMER(javax.servlet.http.HttpServletRequest request) throws Exception {
 
@@ -241,19 +241,19 @@ public boolean performPB_SUPPRIMER(javax.servlet.http.HttpServletRequest request
 	}
 }
 /**
- * Retourne le nom du groupe de radio boutons coché pour la JSP :
+ * Retourne le nom du groupe de radio boutons cochÃ© pour la JSP :
  * RG_DROITS
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_RG_DROITS() {
 	return "NOM_RG_DROITS";
 }
 /**
- * Retourne la valeur du radio bouton (RB_) coché dans la JSP :
+ * Retourne la valeur du radio bouton (RB_) cochÃ© dans la JSP :
  * RG_DROITS
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_RG_DROITS() {
 	return getZone(getNOM_RG_DROITS());
@@ -261,8 +261,8 @@ public java.lang.String getVAL_RG_DROITS() {
 /**
  * Retourne le nom du radio bouton pour la JSP :
  * RB_DROITS
- * Date de création : (30/04/09 13:39:03)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 13:39:03)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_RB_DROITS() {
 	return "NOM_RB_DROITS";
@@ -272,8 +272,8 @@ public java.lang.String getNOM_RB_DROITS() {
 
 /**
  * controle la validite de la radiobox 
- * et ajoute le droit sélectionné dans la variable activité DROIT_NOM
- * @return true si une radiobox a bien été sélectionnée
+ * et ajoute le droit sÃ©lectionnÃ© dans la variable activitÃ© DROIT_NOM
+ * @return true si une radiobox a bien Ã©tÃ© sÃ©lectionnÃ©e
  */
 public boolean ControleRadioBoxComptes(){
 	if (getZone(getNOM_RB_DROITS())!=null && getZone(getNOM_RB_DROITS()).length()>0){
@@ -360,7 +360,7 @@ public String generateTABLO_DROITS() throws Exception, NumberFormatException{
 		boolean ispaire=false;
 		for ( Iterator iter = hTMapDroits.entrySet().iterator(); iter.hasNext(); ) {
 			Map.Entry<String,boolean[]> ent = (Map.Entry) iter.next();
-			//La clé de la HashMap
+			//La clÃ© de la HashMap
 			String droitCourant = ent.getKey();
 			DroitsApp daEnCours=DroitsApp.chercherDroitsApp(getTransaction(), droitCourant);
 			//La Valeur de la HashMap

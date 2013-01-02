@@ -1,8 +1,8 @@
-package nc.mairie.droitsapplis.metier;
+ï»¿package nc.mairie.droitsapplis.metier;
 
 import nc.mairie.technique.BasicRecord;
 /**
- * Broker de l'Objet métier Groupe
+ * Broker de l'Objet mÃ©tier Groupe
  */
 public class GroupeBroker extends nc.mairie.technique.BasicBroker {
 /**
@@ -35,7 +35,7 @@ protected java.lang.String definirNomTable() {
 protected java.util.Hashtable definirMappageTable() throws NoSuchFieldException {
 	java.util.Hashtable mappage = new java.util.Hashtable();
 	mappage.put("LIGROU", new BasicRecord("LIGROU", "CHAR", getMyGroupe().getClass().getField("ligrou"), "STRING"));
-	mappage.put("CDGROU", new BasicRecord("CDGROU", "INTEGER", getMyGroupe().getClass().getField("cdgrou"), "STRING"));
+	mappage.put("CDGROU", new BasicRecord("CDGROU", "INTEGER", getMyGroupe().getClass().getField("cdgrou"), "IDENTITY"));
 	mappage.put("DEFINITION", new BasicRecord("DEFINITION", "CHAR", getMyGroupe().getClass().getField("definition"), "STRING"));
 	return mappage;
 }
@@ -61,7 +61,7 @@ public boolean supprimerGroupe(nc.mairie.technique.Transaction aTransaction) thr
 	return supprimer(aTransaction);
 }
 /**
- * Retourne un ArrayList d'objet métier : Groupe.
+ * Retourne un ArrayList d'objet mÃ©tier : Groupe.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList listerGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception {
@@ -75,7 +75,7 @@ public Groupe chercherGroupe(nc.mairie.technique.Transaction aTransaction, Strin
 	return (Groupe)executeSelect(aTransaction,"select * from "+getTable()+" where CDGROU = "+groupid+"");
 }
 /**
- * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * Retourne un ArrayList d'objet mÃ©tier : CompteGroupe.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList<Groupe> listerGroupefromCompte(nc.mairie.technique.Transaction aTransaction, String compte) throws Exception {
@@ -97,7 +97,7 @@ public java.util.ArrayList<Groupe> listerGroupefromCompteAndAppli(nc.mairie.tech
 }
 
 /**
- * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * Retourne un ArrayList d'objet mÃ©tier : CompteGroupe.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList<Groupe> listerGroupefromDroit(nc.mairie.technique.Transaction aTransaction, String droit) throws Exception {

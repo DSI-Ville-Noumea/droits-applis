@@ -1,7 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%-- jsf:pagecode language="java" location="/src/pagecode/GestionCompteAvance.java" --%><%-- /jsf:pagecode --%>
-<%@page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+
 <%@page import="nc.mairie.droitsapplis.process.GestionCompteAvance"%>
 <html>
 <head>
@@ -9,7 +8,7 @@
 <LINK href="theme/sigp2.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="theme/dynatablo.css" type="text/css"> 
 <title>Gestion des Comptes</title>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html">
 <meta name="GENERATOR" content="Rational Application Developer">
 
 <script type="text/JavaScript" src="js/sortTable.js"></script>
@@ -23,14 +22,14 @@
 <%if(process.isSuppression){ %>
 <tr><td align="center">
 <br>
-<span class="TitreDroits">Etes-vous sur de vouloir supprimer tous les groupes (droits) associés à ce compte ?
+<span class="TitreDroits">Etes-vous sur de vouloir supprimer tous les groupes (droits) associÃ©s Ã  ce compte ?
 <br>
 <span class="color: red;"><%= process.getVAL_ST_NOM_COMPTE() %></span></span>
 <br>
 <% }else{ %>
 <tr><td><div id="TableContainer" class="TableContainer" style="height:250px;width:600px;text-align:center;">
 <br>
-<span class="TitreDroits">Les Groupes associés au compte <span class="TitreDroitsLbl"><%= process.getVAL_ST_NOM_COMPTE() %></span></span>
+<span class="TitreDroits">Les Groupes associÃ©s au compte <span class="TitreDroitsLbl"><%= process.getVAL_ST_NOM_COMPTE() %></span></span>
 <br>
 			<TABLE class="sigp2">
 				<TR>
@@ -59,7 +58,7 @@
 					name="<%=process.getNOM_PB_SUPPRIMER() %>" class="sigp2-Bouton-100"></TD>
 	<%} %>
 					<TD width="40%">
-						<FIELDSET><LEGEND class="sigp2Fieldset" align="left">Groupes associés à ce compte</LEGEND>
+						<FIELDSET><LEGEND class="sigp2Fieldset" align="left">Groupes associÃ©s Ã  ce compte</LEGEND>
 						<TABLE border="0" class="sigp2"  width="100%">
 							<TR>
 								<TD align="left" width="100%">

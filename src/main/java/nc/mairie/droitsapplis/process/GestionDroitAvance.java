@@ -1,4 +1,4 @@
-package nc.mairie.droitsapplis.process;
+ï»¿package nc.mairie.droitsapplis.process;
 
 import java.util.ArrayList;
 
@@ -11,8 +11,8 @@ import nc.mairie.metier.Utils;
 import nc.mairie.technique.*;
 /**
  * Process GestionDroitAvance
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
 */
 public class GestionDroitAvance extends nc.mairie.technique.BasicProcess {
 	private java.lang.String[] LB_APPLICATION;
@@ -35,12 +35,12 @@ public class GestionDroitAvance extends nc.mairie.technique.BasicProcess {
 	private boolean isfirst=true;
 	
 /**
- * Initialisation des zones à afficher dans la JSP
+ * Initialisation des zones Ã  afficher dans la JSP
  * Alimentation des listes, s'il y en a, avec setListeLB_XXX()
  * ATTENTION : Les Objets dans la liste doivent avoir les Fields PUBLIC
- * Utilisation de la méthode addZone(getNOMxxx, String);
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Utilisation de la mÃ©thode addZone(getNOMxxx, String);
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public void initialiseZones(javax.servlet.http.HttpServletRequest request) throws Exception{
 	//System.out.println("PASS initZone GestionDroitAvance first="+isfirst);
@@ -136,10 +136,10 @@ public void initialiseGroupesSides(){
 
 }
 /**
- * Méthode appelée par la servlet qui aiguille le traitement : 
+ * MÃ©thode appelÃ©e par la servlet qui aiguille le traitement : 
  * en fonction du bouton de la JSP 
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean recupererStatut(javax.servlet.http.HttpServletRequest request) throws Exception{
 
@@ -167,23 +167,23 @@ public boolean recupererStatut(javax.servlet.http.HttpServletRequest request) th
 		}
 
 	}
-	//Si TAG INPUT non géré par le process
+	//Si TAG INPUT non gÃ©rÃ© par le process
 	setStatut(STATUT_MEME_PROCESS);
 	return true;
 }
 /**
  * Constructeur du process GestionDroitAvance.
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public GestionDroitAvance() {
 	super();
 }
 /**
  * Retourne le nom de la JSP du process
- * Zone à utiliser dans un champ caché dans chaque formulaire de la JSP.
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Zone Ã  utiliser dans un champ cachÃ© dans chaque formulaire de la JSP.
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public String getJSP() {
 	return "GestionDroitAvance.jsp";
@@ -192,29 +192,29 @@ public String getJSP() {
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_AJOUTER
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_AJOUTER() {
 	return "NOM_PB_AJOUTER";
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_AJOUTER(javax.servlet.http.HttpServletRequest request) throws Exception {
-	// on ajoute le groupe à la liste des groupes pour le compte
+	// on ajoute le groupe Ã  la liste des groupes pour le compte
 	int indice = (Services.estNumerique(getVAL_LB_GROUPES_GAUCHE_SELECT()) ? Integer.parseInt(getVAL_LB_GROUPES_GAUCHE_SELECT()): -1); 
 	if (indice == -1) {
-		getTransaction().declarerErreur("Vous devez sélectionner un élement");
+		getTransaction().declarerErreur("Vous devez sÃ©lectionner un Ã©lement");
 		return false;
 	}
 	Groupe unGroupe = (Groupe)getListGroupeGauche().get(indice);
-	// on ajoute à la liste
+	// on ajoute Ã  la liste
 	getListGroupeDroite().add(unGroupe);
 	getListGroupeGauche().remove(indice);
 	return true;
@@ -223,30 +223,30 @@ public boolean performPB_AJOUTER(javax.servlet.http.HttpServletRequest request) 
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_SUPPRIMER
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_SUPPRIMER() {
 	return "NOM_PB_SUPPRIMER";
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_SUPPRIMER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	
-	// on ajoute le groupe à la liste des groupes pour le compte
+	// on ajoute le groupe Ã  la liste des groupes pour le compte
 	int indice = (Services.estNumerique(getVAL_LB_GROUPES_DROITE_SELECT()) ? Integer.parseInt(getVAL_LB_GROUPES_DROITE_SELECT()): -1); 
 	if (indice == -1) {
-		getTransaction().declarerErreur("Vous devez sélectionner un élement");
+		getTransaction().declarerErreur("Vous devez sÃ©lectionner un Ã©lement");
 		return false;
 	}
 	Groupe unGroupe = (Groupe)getListGroupeDroite().get(indice);
-	// on ajoute à la liste
+	// on ajoute Ã  la liste
 	getListGroupeGauche().add(unGroupe);
 	getListGroupeDroite().remove(indice);
 	return true;
@@ -256,19 +256,19 @@ public boolean performPB_SUPPRIMER(javax.servlet.http.HttpServletRequest request
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_ANNULER
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_ANNULER() {
 	return "NOM_PB_ANNULER";
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	setStatut(STATUT_PROCESS_APPELANT);
@@ -277,19 +277,19 @@ public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) 
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_VALIDER
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_VALIDER() {
 	return "NOM_PB_VALIDER";
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_VALIDER(javax.servlet.http.HttpServletRequest request) throws Exception {
 
@@ -328,14 +328,14 @@ public boolean performPB_VALIDER(javax.servlet.http.HttpServletRequest request) 
 			int indice = (Services.estNumerique(getVAL_LB_APPLICATION_SELECT()) ? Integer.parseInt(getVAL_LB_APPLICATION_SELECT()): -1);
 			//System.out.println("INDICE SELECTIONNE="+indice);
 			if (indice == -1) {
-				getTransaction().declarerErreur("Vous devez sélectionner une application pour ce droit");
+				getTransaction().declarerErreur("Vous devez sÃ©lectionner une application pour ce droit");
 				return false;
 			}
 			daDroitCourant.setApplication(getListApplications().get(indice));
 		}
 
 		if (sActionDroitCourant.equals(GestionDroits.AJOUTER_DROIT)){
-			//Cas création
+			//Cas crÃ©ation
 			daDroitCourant.creerDroitsApp(getTransaction());
 		}else if (sActionDroitCourant.equals(GestionDroits.MODIFIER_DROIT)){
 			daDroitCourant.modifierDroitsApp(getTransaction());
@@ -381,7 +381,7 @@ public boolean performPB_VALIDER(javax.servlet.http.HttpServletRequest request) 
 	if(getTransaction().isErreur()){
 		return false;
 	}
-	//tout s'est bien passé
+	//tout s'est bien passÃ©
 	commitTransaction();
 
 	//on vide les zones
@@ -395,17 +395,17 @@ public boolean performPB_VALIDER(javax.servlet.http.HttpServletRequest request) 
 /**
  * Retourne pour la JSP le nom de la zone statique :
  * ST_APPLICATION
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_ST_APPLICATION() {
 	return "NOM_ST_APPLICATION";
 }
 /**
- * Retourne la valeur à afficher par la JSP  pour la zone :
+ * Retourne la valeur Ã  afficher par la JSP  pour la zone :
  * ST_APPLICATION
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_ST_APPLICATION() {
 	return getZone(getNOM_ST_APPLICATION());
@@ -413,17 +413,17 @@ public java.lang.String getVAL_ST_APPLICATION() {
 /**
  * Retourne pour la JSP le nom de la zone statique :
  * ST_GROUPE
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_ST_GROUPE() {
 	return "NOM_ST_GROUPE";
 }
 /**
- * Retourne la valeur à afficher par la JSP  pour la zone :
+ * Retourne la valeur Ã  afficher par la JSP  pour la zone :
  * ST_GROUPE
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_ST_GROUPE() {
 	return getZone(getNOM_ST_GROUPE());
@@ -431,17 +431,17 @@ public java.lang.String getVAL_ST_GROUPE() {
 /**
  * Retourne pour la JSP le nom de la zone statique :
  * ST_NOM
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_ST_NOM() {
 	return "NOM_ST_NOM";
 }
 /**
- * Retourne la valeur à afficher par la JSP  pour la zone :
+ * Retourne la valeur Ã  afficher par la JSP  pour la zone :
  * ST_NOM
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_ST_NOM() {
 	return getZone(getNOM_ST_NOM());
@@ -449,17 +449,17 @@ public java.lang.String getVAL_ST_NOM() {
 /**
  * Retourne le nom d'une zone de saisie pour la JSP :
  * EF_APPLICATION
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_EF_APPLICATION() {
 	return "NOM_EF_APPLICATION";
 }
 /**
- * Retourne la valeur à afficher par la JSP pour la zone de saisie  :
+ * Retourne la valeur Ã  afficher par la JSP pour la zone de saisie  :
  * EF_APPLICATION
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_EF_APPLICATION() {
 	return getZone(getNOM_EF_APPLICATION());
@@ -467,17 +467,17 @@ public java.lang.String getVAL_EF_APPLICATION() {
 /**
  * Retourne le nom d'une zone de saisie pour la JSP :
  * EF_NOM
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_EF_NOM() {
 	return "NOM_EF_NOM";
 }
 /**
- * Retourne la valeur à afficher par la JSP pour la zone de saisie  :
+ * Retourne la valeur Ã  afficher par la JSP pour la zone de saisie  :
  * EF_NOM
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_EF_NOM() {
 	return getZone(getNOM_EF_NOM());
@@ -485,8 +485,8 @@ public java.lang.String getVAL_EF_NOM() {
 /**
  * Getter de la liste avec un lazy initialize :
  * LB_APPLICATION
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 private String [] getLB_APPLICATION() {
 	if (LB_APPLICATION == null)
@@ -496,8 +496,8 @@ private String [] getLB_APPLICATION() {
 /**
  * Setter de la liste:
  * LB_APPLICATION
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 private void setLB_APPLICATION(java.lang.String[] newLB_APPLICATION) {
 	LB_APPLICATION = newLB_APPLICATION;
@@ -505,37 +505,37 @@ private void setLB_APPLICATION(java.lang.String[] newLB_APPLICATION) {
 /**
  * Retourne le nom de la zone pour la JSP :
  * NOM_LB_APPLICATION
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_LB_APPLICATION() {
 	return "NOM_LB_APPLICATION";
 }
 /**
- * Retourne le nom de la zone de la ligne sélectionnée pour la JSP :
+ * Retourne le nom de la zone de la ligne sÃ©lectionnÃ©e pour la JSP :
  * NOM_LB_APPLICATION_SELECT
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_LB_APPLICATION_SELECT() {
 	return "NOM_LB_APPLICATION_SELECT";
 }
 /**
- * Méthode à personnaliser
- * Retourne la valeur à afficher pour la zone de la JSP :
+ * MÃ©thode Ã  personnaliser
+ * Retourne la valeur Ã  afficher pour la zone de la JSP :
  * LB_APPLICATION
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String [] getVAL_LB_APPLICATION() {
 	return getLB_APPLICATION();
 }
 /**
- * Méthode à personnaliser
- * Retourne l'indice à sélectionner pour la zone de la JSP :
+ * MÃ©thode Ã  personnaliser
+ * Retourne l'indice Ã  sÃ©lectionner pour la zone de la JSP :
  * LB_APPLICATION
- * Date de création : (30/04/09 15:21:25)
- * @author : Générateur de process
+ * Date de crÃ©ation : (30/04/09 15:21:25)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_LB_APPLICATION_SELECT() {
 	return getZone(getNOM_LB_APPLICATION_SELECT());
@@ -544,8 +544,8 @@ public java.lang.String getVAL_LB_APPLICATION_SELECT() {
 /**
  * Getter de la liste avec un lazy initialize :
  * LB_GROUPES_DROITE
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 private String [] getLB_GROUPES_DROITE() {
 	if (LB_GROUPES_DROITE == null)
@@ -555,8 +555,8 @@ private String [] getLB_GROUPES_DROITE() {
 /**
  * Setter de la liste:
  * LB_GROUPES_DROITE
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 private void setLB_GROUPES_DROITE(java.lang.String[] newLB_GROUPES_DROITE) {
 	LB_GROUPES_DROITE = newLB_GROUPES_DROITE;
@@ -564,37 +564,37 @@ private void setLB_GROUPES_DROITE(java.lang.String[] newLB_GROUPES_DROITE) {
 /**
  * Retourne le nom de la zone pour la JSP :
  * NOM_LB_GROUPES_DROITE
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_LB_GROUPES_DROITE() {
 	return "NOM_LB_GROUPES_DROITE";
 }
 /**
- * Retourne le nom de la zone de la ligne sélectionnée pour la JSP :
+ * Retourne le nom de la zone de la ligne sÃ©lectionnÃ©e pour la JSP :
  * NOM_LB_GROUPES_DROITE_SELECT
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_LB_GROUPES_DROITE_SELECT() {
 	return "NOM_LB_GROUPES_DROITE_SELECT";
 }
 /**
- * Méthode à personnaliser
- * Retourne la valeur à afficher pour la zone de la JSP :
+ * MÃ©thode Ã  personnaliser
+ * Retourne la valeur Ã  afficher pour la zone de la JSP :
  * LB_GROUPES_DROITE
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String [] getVAL_LB_GROUPES_DROITE() {
 	return getLB_GROUPES_DROITE();
 }
 /**
- * Méthode à personnaliser
- * Retourne l'indice à sélectionner pour la zone de la JSP :
+ * MÃ©thode Ã  personnaliser
+ * Retourne l'indice Ã  sÃ©lectionner pour la zone de la JSP :
  * LB_GROUPES_DROITE
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_LB_GROUPES_DROITE_SELECT() {
 	return getZone(getNOM_LB_GROUPES_DROITE_SELECT());
@@ -602,8 +602,8 @@ public java.lang.String getVAL_LB_GROUPES_DROITE_SELECT() {
 /**
  * Getter de la liste avec un lazy initialize :
  * LB_GROUPES_GAUCHE
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 private String [] getLB_GROUPES_GAUCHE() {
 	if (LB_GROUPES_GAUCHE == null)
@@ -613,8 +613,8 @@ private String [] getLB_GROUPES_GAUCHE() {
 /**
  * Setter de la liste:
  * LB_GROUPES_GAUCHE
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 private void setLB_GROUPES_GAUCHE(java.lang.String[] newLB_GROUPES_GAUCHE) {
 	LB_GROUPES_GAUCHE = newLB_GROUPES_GAUCHE;
@@ -622,37 +622,37 @@ private void setLB_GROUPES_GAUCHE(java.lang.String[] newLB_GROUPES_GAUCHE) {
 /**
  * Retourne le nom de la zone pour la JSP :
  * NOM_LB_GROUPES_GAUCHE
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_LB_GROUPES_GAUCHE() {
 	return "NOM_LB_GROUPES_GAUCHE";
 }
 /**
- * Retourne le nom de la zone de la ligne sélectionnée pour la JSP :
+ * Retourne le nom de la zone de la ligne sÃ©lectionnÃ©e pour la JSP :
  * NOM_LB_GROUPES_GAUCHE_SELECT
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_LB_GROUPES_GAUCHE_SELECT() {
 	return "NOM_LB_GROUPES_GAUCHE_SELECT";
 }
 /**
- * Méthode à personnaliser
- * Retourne la valeur à afficher pour la zone de la JSP :
+ * MÃ©thode Ã  personnaliser
+ * Retourne la valeur Ã  afficher pour la zone de la JSP :
  * LB_GROUPES_GAUCHE
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String [] getVAL_LB_GROUPES_GAUCHE() {
 	return getLB_GROUPES_GAUCHE();
 }
 /**
- * Méthode à personnaliser
- * Retourne l'indice à sélectionner pour la zone de la JSP :
+ * MÃ©thode Ã  personnaliser
+ * Retourne l'indice Ã  sÃ©lectionner pour la zone de la JSP :
  * LB_GROUPES_GAUCHE
- * Date de création : (27/04/09 16:06:40)
- * @author : Générateur de process
+ * Date de crÃ©ation : (27/04/09 16:06:40)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_LB_GROUPES_GAUCHE_SELECT() {
 	return getZone(getNOM_LB_GROUPES_GAUCHE_SELECT());

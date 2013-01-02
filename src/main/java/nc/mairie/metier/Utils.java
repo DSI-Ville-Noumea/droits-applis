@@ -1,5 +1,5 @@
-/*
- * Created on 6 févr. 2009
+ï»¿/*
+ * Created on 6 fÃ©vr. 2009
  *
  * TODO To change the template for this generated file go to
  * Window - Preferences - Java - Code Style - Code Templates
@@ -17,7 +17,7 @@ import nc.mairie.droitsapplis.metier.Groupe;
 
 /**
  * @author fonol77
- * Méthodes génériques utilitaires
+ * MÃ©thodes gÃ©nÃ©riques utilitaires
  * 
  * TODO To change the template for this generated type comment go to
  * Window - Preferences - Java - Code Style - Code Templates
@@ -28,7 +28,7 @@ public class Utils {
 	 * 
 	 * @param l1
 	 * @param l2
-	 * @return ArrayListe l1 ayant éléminé de la liste l1 les éléments en communs avec l2
+	 * @return ArrayListe l1 ayant Ã©lÃ©minÃ© de la liste l1 les Ã©lÃ©ments en communs avec l2
 	 * fonctionne uniquement avec une liste l1 n'ayant pas 2 elements identiques
 	 */
 	public static ArrayList Elim_doubure(ArrayList l1,ArrayList l2)
@@ -126,7 +126,7 @@ public class Utils {
 	 * 
 	 * @param l1
 	 * @param l2
-	 * @return ArrayListe l1 ayant éléminé de la liste l1 les elements e2
+	 * @return ArrayListe l1 ayant Ã©lÃ©minÃ© de la liste l1 les elements e2
 	 * 
 	 */
 	public static ArrayList Elim_element(ArrayList l1, Object e2)
@@ -149,7 +149,7 @@ public class Utils {
 	/**
 	 * 
 	 * @param al
-	 * @return ArrayList entrée moins ses doublons.
+	 * @return ArrayList entrÃ©e moins ses doublons.
 	 */
 	public static ArrayList antiDoublon(ArrayList al) {
         
@@ -167,7 +167,7 @@ public class Utils {
 	public static void affichhMap(HashMap<String,boolean[]> hTMapDroits) {
 		for ( Iterator iter = hTMapDroits.entrySet().iterator(); iter.hasNext(); ) {
 			Map.Entry<String,boolean[]> ent = (Map.Entry) iter.next();
-			//La clé de la HashMap
+			//La clÃ© de la HashMap
 			String droit = ent.getKey();
 			//La Valeur de la HashMap
 			boolean[] tablo = ent.getValue();

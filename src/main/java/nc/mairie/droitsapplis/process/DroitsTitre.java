@@ -1,4 +1,4 @@
-package nc.mairie.droitsapplis.process;
+ï»¿package nc.mairie.droitsapplis.process;
 
 import java.util.ArrayList;
 
@@ -9,19 +9,19 @@ import nc.mairie.servlets.Frontale;
 import nc.mairie.technique.*;
 /**
  * Process SeatIndex
- * Date de création : (24/08/07 07:53:07)
- * @author : Générateur de process
+ * Date de crÃ©ation : (24/08/07 07:53:07)
+ * @author : GÃ©nÃ©rateur de process
 */
 public class DroitsTitre extends nc.mairie.technique.BasicProcess {
 	private String focus = null;
 	public String dpt = "toto";
 /**
- * Initialisation des zones à afficher dans la JSP
+ * Initialisation des zones Ã  afficher dans la JSP
  * Alimentation des listes, s'il y en a, avec setListeLB_XXX()
  * ATTENTION : Les Objets dans la liste doivent avoir les Fields PUBLIC
- * Utilisation de la méthode addZone(getNOMxxx, String);
- * Date de création : (24/08/07 07:53:07)
- * @author : Générateur de process
+ * Utilisation de la mÃ©thode addZone(getNOMxxx, String);
+ * Date de crÃ©ation : (24/08/07 07:53:07)
+ * @author : GÃ©nÃ©rateur de process
  */
 public void initialiseZones(javax.servlet.http.HttpServletRequest request) throws Exception{
 	//System.out.println("PASS initZone DroitsTitre");
@@ -40,10 +40,10 @@ public void initialiseZones(javax.servlet.http.HttpServletRequest request) throw
 */
 }
 /**
- * Méthode appelée par la servlet qui aiguille le traitement : 
+ * MÃ©thode appelÃ©e par la servlet qui aiguille le traitement : 
  * en fonction du bouton de la JSP 
- * Date de création : (24/08/07 07:53:07)
- * @author : Générateur de process
+ * Date de crÃ©ation : (24/08/07 07:53:07)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean recupererStatut(javax.servlet.http.HttpServletRequest request) throws Exception{
 
@@ -51,23 +51,23 @@ public boolean recupererStatut(javax.servlet.http.HttpServletRequest request) th
 	if (request.getParameter("JSP")!=null && request.getParameter("JSP").equals(getJSP())) {
 
 	}
-	//Si TAG INPUT non géré par le process
+	//Si TAG INPUT non gÃ©rÃ© par le process
 	setStatut(STATUT_MEME_PROCESS);
 	return true;
 }
 /**
  * Constructeur du process SeatIndex.
- * Date de création : (24/08/07 07:53:07)
- * @author : Générateur de process
+ * Date de crÃ©ation : (24/08/07 07:53:07)
+ * @author : GÃ©nÃ©rateur de process
  */
 public DroitsTitre() {
 	super();
 }
 /**
  * Retourne le nom de la JSP du process
- * Zone à utiliser dans un champ caché dans chaque formulaire de la JSP.
- * Date de création : (24/08/07 07:53:07)
- * @author : Générateur de process
+ * Zone Ã  utiliser dans un champ cachÃ© dans chaque formulaire de la JSP.
+ * Date de crÃ©ation : (24/08/07 07:53:07)
+ * @author : GÃ©nÃ©rateur de process
  */
 public String getJSP() {
 	return "DroitsTitre.jsp";

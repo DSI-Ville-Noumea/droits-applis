@@ -1,8 +1,8 @@
-package nc.mairie.droitsapplis.metier;
+ï»¿package nc.mairie.droitsapplis.metier;
 
 import nc.mairie.technique.BasicRecord;
 /**
- * Broker de l'Objet métier CompteGroupe
+ * Broker de l'Objet mÃ©tier CompteGroupe
  */
 public class CompteGroupeBroker extends nc.mairie.technique.BasicBroker {
 /**
@@ -60,14 +60,14 @@ public boolean supprimerCompteGroupe(nc.mairie.technique.Transaction aTransactio
 	return supprimer(aTransaction);
 }
 /**
- * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * Retourne un ArrayList d'objet mÃ©tier : CompteGroupe.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList listerCompteGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+"");
 }
 /**
- * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * Retourne un ArrayList d'objet mÃ©tier : CompteGroupe.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList listerCompteGroupe(nc.mairie.technique.Transaction aTransaction, String sCompte) throws Exception {
