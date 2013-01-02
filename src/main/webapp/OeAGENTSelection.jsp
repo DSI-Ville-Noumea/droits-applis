@@ -1,21 +1,21 @@
-<!-- Sample JSP file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ï»¿<!-- Sample JSP file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
 <META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
 <META http-equiv="Content-Style-Type" content="text/css">
 <LINK href="theme/sigp2.css" rel="stylesheet" type="text/css">
-<TITLE>Sélection d'un agent</TITLE>
+<TITLE>SÃ©lection d'un agent</TITLE>
 
 <!-- SCRIPT language="javascript" src="js/GestionBoutonDroit.js"></SCRIPT -->
 
 <SCRIPT language="JavaScript">
-//afin de sélectionner un élément dans une liste
+//afin de sÃ©lectionner un Ã©lÃ©ment dans une liste
 function executeBouton(nom)
 {
 document.formu.elements[nom].click();
 }
 
-// afin de mettre le focus sur une zone précise
+// afin de mettre le focus sur une zone prÃ©cise
 function setfocus(nom)
 {
 if (document.formu.elements[nom] != null)
@@ -34,7 +34,7 @@ frm.submit();
 }
 
 </SCRIPT>
-<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META http-equiv="Content-Type" content="text/html">
 </HEAD>
 <jsp:useBean class="nc.mairie.droitsapplis.process.OeAGENTSelection" id="process" scope="session"></jsp:useBean>
 <BODY bgcolor="#ffffff" text="#000000" style="cursor : auto;" onload="return setfocus('<%=process.getFocus() %>')"><BASEFONT FACE="Arial" SIZE=2> 
@@ -60,7 +60,7 @@ frm.submit();
       <TABLE width="560" border="0" cellpadding="0" cellspacing="0" align="center">
         <TBODY>
           <TR>
-            <TD class="sigp2-titre" style="text-align : center;">Sélection d'un compte<br>
+            <TD class="sigp2-titre" style="text-align : center;">SÃ©lection d'un compte<br>
 					<BR>
             </TD>
           </TR>

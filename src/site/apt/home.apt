@@ -7,4 +7,6 @@
 
 Gestions des droits sur les applications
 
- A REMPLIR...
+ Cette application permet de gérer l'attribution des droits des différents utilisateurs sur les applications Mairie.
+ 
+ Pour plus d'informations, voir la {{{./docs/Applis_Java_Mairie.pdf}documentation}} au format PDF.

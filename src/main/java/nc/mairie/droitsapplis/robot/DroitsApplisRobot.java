@@ -1,4 +1,4 @@
-package nc.mairie.droitsapplis.robot;
+ï»¿package nc.mairie.droitsapplis.robot;
 
 import java.util.Hashtable;
 
@@ -62,7 +62,7 @@ public class DroitsApplisRobot extends Robot {
 
 	@Override
 	protected Testeur initialiseTesteur() {
-		// TODO Raccord de méthode auto-généré
+		// TODO Raccord de mÃ©thode auto-gÃ©nÃ©rÃ©
 		return null;
 	}
 

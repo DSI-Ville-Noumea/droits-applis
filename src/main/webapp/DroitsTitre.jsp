@@ -1,4 +1,4 @@
-<!-- Sample JSP file -->
+﻿<!-- Sample JSP file -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <%@page import="nc.mairie.droitsapplis.client.CheckDroits"%>
 <%@page import="nc.mairie.technique.Transaction"%>

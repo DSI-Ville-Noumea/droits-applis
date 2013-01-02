@@ -1,8 +1,8 @@
-package nc.mairie.droitsapplis.metier;
+ï»¿package nc.mairie.droitsapplis.metier;
 
 import nc.mairie.technique.BasicRecord;
 /**
- * Broker de l'Objet métier GroupeDroits
+ * Broker de l'Objet mÃ©tier GroupeDroits
  */
 public class GroupeDroitsBroker extends nc.mairie.technique.BasicBroker {
 /**
@@ -60,7 +60,7 @@ public boolean supprimerGroupeDroits(nc.mairie.technique.Transaction aTransactio
 	return supprimer(aTransaction);
 }
 /**
- * Retourne un ArrayList d'objet métier : GroupeDroits.
+ * Retourne un ArrayList d'objet mÃ©tier : GroupeDroits.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList listerGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws Exception {

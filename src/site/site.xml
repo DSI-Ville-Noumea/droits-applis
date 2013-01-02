@@ -24,6 +24,11 @@
         <breadcrumbs>
             <item name="Accueil" href="home.html"/>
         </breadcrumbs>
+        
+        <menu name="Documentation">
+        	<item name="Présentation" href="home.html"/>
+        	<item name="Documents" href="documents.html"/>
+        </menu>
 
         <menu ref="reports"/>
     </body>

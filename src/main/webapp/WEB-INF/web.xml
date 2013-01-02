@@ -158,67 +158,7 @@ included, depending on the components used on the page.Default is false.</descri
 		<param-name>com.ibm.faces.USE_HXCLIENT_FULL</param-name>
 		<param-value>false</param-value>
 	</context-param>
-	<context-param>
-		<description>
-		Hote SGBD (ROBINNW ou NOUMA)</description>
-		<param-name>HOST_SGBD</param-name>
-		<param-value>noumea</param-value>
-	</context-param>
-	<context-param>
-		<description>
-		User admin SGBD</description>
-		<param-name>HOST_SGBD_ADMIN</param-name>
-		<param-value>***REMOVED***</param-value>
-	</context-param>
-	<context-param>
-		<description>
-		PWD admin SGBD</description>
-		<param-name>HOST_SGBD_PWD</param-name>
-		<param-value>***REMOVED***</param-value>
-	</context-param>
-	<context-param>
-		<description>
-		Environnement starjet (DVLP, TEST ou PROD)</description>
-		<param-name>STARJET_MODE</param-name>
-		<param-value>PROD</param-value>
-	</context-param>
-	<context-param>
-		<description>Nom de l'application déclarée SIDRAP pour connaitre les droits</description>
-		<param-name>APPLICATION</param-name>
-		<param-value>DroitsAppli</param-value>
-	</context-param>
-	<context-param>
-         <param-name>CRITERE_RECHERCHE_LDAP</param-name>
-         <param-value>samaccountname</param-value>
-      </context-param>
-      <context-param>
-         <param-name>HOST_LDAP_ADMIN</param-name>
-         <param-value>cn=***REMOVED***,ou=WAS,ou=APPLI,ou=Z-users</param-value>
-      </context-param>
-      <context-param>
-         <param-name>HOST_LDAP</param-name>
-         <param-value>ldap://hurle:389/</param-value>
-      </context-param>
-      <context-param>
-         <param-name>INITCTX_LDAP</param-name>
-         <param-value>com.sun.jndi.ldap.LdapCtxFactory</param-value>
-      </context-param>
-      <context-param>
-         <param-name>HOST_LDAP_PASSWORD</param-name>
-         <param-value>***REMOVED***</param-value>
-      </context-param>
-      <context-param>
-         <param-name>BASE_LDAP</param-name>
-         <param-value>dc=site-mairie,dc=noumea,dc=nc</param-value>
-      </context-param>
-      <context-param>
-         <param-name>HOST_LDAP3</param-name>
-         <param-value>ldap://netone:389/</param-value>
-      </context-param>
-      <context-param>
-         <param-name>HOST_LDAP2</param-name>
-         <param-value>ldap://gberge:389/</param-value>
-      </context-param>
+	 
 	<listener>
 		<listener-class>com.sun.faces.config.ConfigureListener</listener-class>
 	</listener>

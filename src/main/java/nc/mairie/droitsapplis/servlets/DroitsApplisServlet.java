@@ -1,4 +1,4 @@
-package nc.mairie.droitsapplis.servlets;
+ï»¿package nc.mairie.droitsapplis.servlets;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -62,7 +62,7 @@ protected boolean performControleHabilitation(HttpServletRequest request)
                                initialiseHabilitations(request);
                               //Si pas d'habilitation alors erreur
                                if (aUserAppli.getListeDroits().size() == 0) {
-                                           String message = "Le user "+aUserAppli.getUserName()+" n'est pas habilité à utiliser l'application";
+                                           String message = "Le user "+aUserAppli.getUserName()+" n'est pas habilitÃ© Ã  utiliser l'application";
                                            System.out.println(message);
                                            //throw new Exception (message);
                                            //return false;

@@ -1,18 +1,18 @@
-package nc.mairie.droitsapplis.metier;
+ï»¿package nc.mairie.droitsapplis.metier;
 
 import nc.mairie.technique.BasicMetier;
 import nc.mairie.technique.BasicRecord;
 import nc.mairie.technique.Transaction;
 
 /**
- * Broker de l'Objet métier Compte.
+ * Broker de l'Objet mÃ©tier Compte.
  */
 public class CompteBroker extends nc.mairie.technique.BasicBroker {
 	
 /**
  * Constructeur CompteBroker.
  * 
- * @param aMetier l'objet Métier
+ * @param aMetier l'objet MÃ©tier
  */
 public CompteBroker(final nc.mairie.technique.BasicMetier aMetier) {
 	super(aMetier);
@@ -57,7 +57,7 @@ protected final java.util.Hashtable definirMappageTable() throws NoSuchFieldExce
  * true ou false.
  * 
  * @param aTransaction la transaction en cours
- * @return vrai ou faux si le compte n'est pas créé
+ * @return vrai ou faux si le compte n'est pas crÃ©Ã©
  * @throws Exception 
  */
 public final boolean creerCompte(final Transaction aTransaction)  throws Exception {
@@ -69,7 +69,7 @@ public final boolean creerCompte(final Transaction aTransaction)  throws Excepti
  * true ou false.
  * 
  * @param aTransaction la transaction en cours
- * @return vrai ou faux si le compte n'est pas modifié
+ * @return vrai ou faux si le compte n'est pas modifiÃ©
  * @throws Exception 
  */
 public final boolean modifierCompte(final Transaction aTransaction) throws Exception {
@@ -81,7 +81,7 @@ public final boolean modifierCompte(final Transaction aTransaction) throws Excep
  * true ou false.
  * 
  * @param aTransaction la transaction en cours
- * @return vrai ou faux si le compte n'est pas supprimé
+ * @return vrai ou faux si le compte n'est pas supprimÃ©
  * @throws Exception 
  */
 public final boolean supprimerCompte(final Transaction aTransaction) throws Exception {
@@ -89,7 +89,7 @@ public final boolean supprimerCompte(final Transaction aTransaction) throws Exce
 }
 
 /**
- * Retourne un ArrayList d'objet métier : Compte.
+ * Retourne un ArrayList d'objet mÃ©tier : Compte.
  * @return java.util.ArrayList
  */
 public java.util.ArrayList listerCompte(nc.mairie.technique.Transaction aTransaction) throws Exception {

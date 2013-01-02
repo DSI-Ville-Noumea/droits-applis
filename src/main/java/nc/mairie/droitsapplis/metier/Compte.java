@@ -1,10 +1,10 @@
-package nc.mairie.droitsapplis.metier;
+ï»¿package nc.mairie.droitsapplis.metier;
 
 import nc.mairie.technique.BasicBroker;
 import nc.mairie.technique.Transaction;
 
 /**
- * Objet métier Compte.
+ * Objet mÃ©tier Compte.
  */
 public class Compte extends nc.mairie.technique.BasicMetier {
 	
@@ -79,7 +79,7 @@ public final void setPrinter(final String newPrinter) {
 }
 
 /**
- * Methode à définir dans chaque objet Métier pour instancier un Broker.
+ * Methode Ã  dÃ©finir dans chaque objet MÃ©tier pour instancier un Broker.
  * 
  * @return une instance de BasicBroker
  */
@@ -88,7 +88,7 @@ protected final BasicBroker definirMyBroker() {
 }
 
 /**
- * Methode à définir dans chaque objet Métier pour instancier un Broker.
+ * Methode Ã  dÃ©finir dans chaque objet MÃ©tier pour instancier un Broker.
  * 
  * @return une instance de CompteBroker
  */
@@ -97,17 +97,17 @@ protected final CompteBroker getMyCompteBroker() {
 }
 
 /**
-* Renvoie une chaîne correspondant à la valeur de cet objet.
-* @return une représentation sous forme de chaîne du destinataire
+* Renvoie une chaÃ®ne correspondant Ã  la valeur de cet objet.
+* @return une reprÃ©sentation sous forme de chaÃ®ne du destinataire
 */
 public final String toString() {
-	// Insérez ici le code pour finaliser le destinataire
-	// Cette implémentation transmet le message au super. Vous pouvez remplacer ou compléter le message.
+	// InsÃ©rez ici le code pour finaliser le destinataire
+	// Cette implÃ©mentation transmet le message au super. Vous pouvez remplacer ou complÃ©ter le message.
 	return super.toString();
 }
 
 /**
- * Retourne un ArrayList d'objet métier : Compte.
+ * Retourne un ArrayList d'objet mÃ©tier : Compte.
  * @return java.util.ArrayList
  */
 public static java.util.ArrayList listerCompte(nc.mairie.technique.Transaction aTransaction) throws Exception{
@@ -132,7 +132,7 @@ public static java.util.ArrayList listerComptesfromGroupeOrderByCode(nc.mairie.t
  * 
  * @param aTransaction la transaction en cours
  * @param sCompte le nom du compte
- * @return le Compte demandé
+ * @return le Compte demandÃ©
  * @throws Exception 
  */
 public static Compte chercherCompte(final Transaction aTransaction, final String sCompte) throws Exception {
@@ -155,7 +155,7 @@ public static java.util.ArrayList listerCompteLikeNom(nc.mairie.technique.Transa
  * true ou false.
  * 
  * @param aTransaction la transaction en cours
- * @return vrai ou faux si le compte n'est pas créé
+ * @return vrai ou faux si le compte n'est pas crÃ©Ã©
  * @throws Exception 
  */
 public final boolean creerCompte(final Transaction aTransaction)  throws Exception {
@@ -168,7 +168,7 @@ public final boolean creerCompte(final Transaction aTransaction)  throws Excepti
  * true ou false.
  * 
  * @param aTransaction la transaction en cours
- * @return vrai ou faux si le compte n'est pas modifié
+ * @return vrai ou faux si le compte n'est pas modifiÃ©
  * @throws Exception 
  */
 public final boolean modifierCompte(final Transaction aTransaction) throws Exception {
@@ -181,7 +181,7 @@ public final boolean modifierCompte(final Transaction aTransaction) throws Excep
  * true ou false.
  * 
  * @param aTransaction la transaction en cours
- * @return vrai ou faux si l'objet n'est pas supprimé
+ * @return vrai ou faux si l'objet n'est pas supprimÃ©
  * @throws Exception 
  */
 public final boolean supprimerCompte(final Transaction aTransaction) throws Exception{

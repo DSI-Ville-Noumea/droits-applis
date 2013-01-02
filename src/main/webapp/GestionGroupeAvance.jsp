@@ -1,7 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ï»¿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%-- jsf:pagecode language="java" location="/src/pagecode/GestionGroupeAvance.java" --%><%-- /jsf:pagecode --%>
-<%@page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+
 <%@page import="nc.mairie.droitsapplis.process.GestionGroupes"%>
 <html>
 <head>
@@ -9,7 +8,7 @@
 <LINK href="theme/sigp2.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="theme/dynatablo.css" type="text/css"> 
 <title>Gestion des Groupes</title>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html">
 <meta name="GENERATOR" content="Rational Application Developer">
 
 <script type="text/JavaScript" src="js/sortTable.js"></script>
@@ -68,7 +67,7 @@
 			</TR>
 		</TABLE>
 		<br>
-		<span class="TitreDroits">Les Comptes associés au groupe <span class="TitreDroitsLbl"><%=process.getVAL_ST_NOM()%></span></span>
+		<span class="TitreDroits">Les Comptes associÃ©s au groupe <span class="TitreDroitsLbl"><%=process.getVAL_ST_NOM()%></span></span>
 		<br>
 		<TABLE class="sigp2">
 			<TR>
@@ -103,7 +102,7 @@
 				%>
 				<TD width="40%">
 				<FIELDSET><LEGEND class="sigp2Fieldset" align="left">Comptes
-				associés à ce groupe</LEGEND>
+				associÃ©s Ã  ce groupe</LEGEND>
 				<TABLE border="0" class="sigp2" width="100%">
 					<TR>
 						<TD align="left" width="100%"><SELECT size="10"
@@ -128,7 +127,7 @@
 		
 		<BR>
 		
-		<span class="TitreDroits">Les Droits associés au groupe <span class="TitreDroitsLbl"><%=process.getVAL_ST_NOM()%></span></span>
+		<span class="TitreDroits">Les Droits associÃ©s au groupe <span class="TitreDroitsLbl"><%=process.getVAL_ST_NOM()%></span></span>
 		<br>
 		<TABLE class="sigp2">
 			<TR>
@@ -163,7 +162,7 @@
 				%>
 				<TD width="40%">
 				<FIELDSET><LEGEND class="sigp2Fieldset" align="left">Droits
-				associés à ce groupe</LEGEND>
+				associÃ©s Ã  ce groupe</LEGEND>
 				<TABLE border="0" class="sigp2" width="100%">
 					<TR>
 						<TD align="left" width="100%"><SELECT size="10"

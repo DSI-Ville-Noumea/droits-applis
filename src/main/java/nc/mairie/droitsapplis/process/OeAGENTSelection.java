@@ -1,4 +1,4 @@
-package nc.mairie.droitsapplis.process;
+ï»¿package nc.mairie.droitsapplis.process;
 
 import java.util.ArrayList;
 
@@ -6,8 +6,8 @@ import nc.mairie.technique.*;
 import nc.mairie.droitsapplis.metier.Compte;
 /**
  * Process OeAGENTSelection
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
 */
 public class OeAGENTSelection extends nc.mairie.technique.BasicProcess {
 	public static final int STATUT_EDITCOMPTE=1;
@@ -20,8 +20,8 @@ public class OeAGENTSelection extends nc.mairie.technique.BasicProcess {
 	private Compte theCompte;
 /**
  * Constructeur du process OeAGENTSelection.
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public OeAGENTSelection() {
 	super();
@@ -29,8 +29,8 @@ public OeAGENTSelection() {
 /**
  * Getter de la liste avec un lazy initialize :
  * LB_AGENT
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 private String [] getLB_AGENT() {
 	if (LB_AGENT == null)
@@ -38,8 +38,8 @@ private String [] getLB_AGENT() {
 	return LB_AGENT;
 }
 /**
- * Insérez la description de la méthode ici.
- *  Date de création : (01/01/2003 09:51:40)
+ * InsÃ©rez la description de la mÃ©thode ici.
+ *  Date de crÃ©ation : (01/01/2003 09:51:40)
  * @return java.util.ArrayList
  */
 private java.util.ArrayList getListeCompte() {
@@ -51,8 +51,8 @@ private java.util.ArrayList getListeCompte() {
 /**
  * Retourne le nom d'une zone de saisie pour la JSP :
  * EF_NOM_AGENT
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_EF_NOM_AGENT() {
 	return "NOM_EF_NOM_AGENT";
@@ -60,17 +60,17 @@ public java.lang.String getNOM_EF_NOM_AGENT() {
 /**
  * Retourne le nom de la zone pour la JSP :
  * NOM_LB_AGENT
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_LB_AGENT() {
 	return "NOM_LB_AGENT";
 }
 /**
- * Retourne le nom de la zone de la ligne sélectionnée pour la JSP :
+ * Retourne le nom de la zone de la ligne sÃ©lectionnÃ©e pour la JSP :
  * NOM_LB_AGENT_SELECT
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_LB_AGENT_SELECT() {
 	return "NOM_LB_AGENT_SELECT";
@@ -78,8 +78,8 @@ public java.lang.String getNOM_LB_AGENT_SELECT() {
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_ANNULER
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_ANNULER() {
 	return "NOM_PB_ANNULER";
@@ -87,8 +87,8 @@ public java.lang.String getNOM_PB_ANNULER() {
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_OK
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_OK() {
 	return "NOM_PB_OK";
@@ -96,52 +96,52 @@ public java.lang.String getNOM_PB_OK() {
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_RECHERCHER
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_RECHERCHER() {
 	return "NOM_PB_RECHERCHER";
 }
 /**
- * Retourne la valeur à afficher par la JSP pour la zone de saisie  :
+ * Retourne la valeur Ã  afficher par la JSP pour la zone de saisie  :
  * EF_NOM_AGENT
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_EF_NOM_AGENT() {
 	return getZone(getNOM_EF_NOM_AGENT());
 }
 /**
- * Méthode à personnaliser
- * Retourne la valeur à afficher pour la zone de la JSP :
+ * MÃ©thode Ã  personnaliser
+ * Retourne la valeur Ã  afficher pour la zone de la JSP :
  * LB_AGENT
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String []getVAL_LB_AGENT() {
 	return getLB_AGENT();
 }
 /**
- * Méthode à personnaliser
- * Retourne l'indice à sélectionner pour la zone de la JSP :
+ * MÃ©thode Ã  personnaliser
+ * Retourne l'indice Ã  sÃ©lectionner pour la zone de la JSP :
  * LB_AGENT
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_LB_AGENT_SELECT() {
 	return getZone(getNOM_LB_AGENT_SELECT());
 }
 /**
- * Initialisation des zones à afficher dans la JSP
+ * Initialisation des zones Ã  afficher dans la JSP
  * Alimentation des listes, s'il y en a, avec setListeLB_XXX()
  * ATTENTION : Les Objets dans la liste doivent avoir les Fields PUBLIC
- * Utilisation de la méthode addZone(getNOMxxx, String);
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Utilisation de la mÃ©thode addZone(getNOMxxx, String);
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public void initialiseZones(javax.servlet.http.HttpServletRequest request) throws Exception{
 
-	//Récup de l'agent activité, s'il existe
+	//RÃ©cup de l'agent activitÃ©, s'il existe
 	Compte compte = (Compte)VariableActivite.recuperer(this, VariableActivite.ACTIVITE_AGENT_MAIRIE);
 	if (compte != null) {
 		setCompteEnCours(compte);
@@ -156,11 +156,11 @@ public void initialiseZones(javax.servlet.http.HttpServletRequest request) throw
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	setStatut(STATUT_PROCESS_APPELANT);
@@ -168,17 +168,17 @@ public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) 
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_OK(javax.servlet.http.HttpServletRequest request) throws Exception {
-	//Indice sélectionné dans la liste
+	//Indice sÃ©lectionnÃ© dans la liste
 	int indice = (Services.estNumerique(getZone(getNOM_LB_AGENT_SELECT())) ? Integer.parseInt(getZone(getNOM_LB_AGENT_SELECT())) : -1);
 
-	//Si pas d'élément sélectionné
+	//Si pas d'Ã©lÃ©ment sÃ©lectionnÃ©
 	if (indice == -1 || getListeCompte() == null || getListeCompte().size() == 0) {
 		setStatut(STATUT_MEME_PROCESS,true,MairieMessages.getMessage("ERR997","comptes"));
 		return false;
@@ -192,11 +192,11 @@ public boolean performPB_OK(javax.servlet.http.HttpServletRequest request) throw
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_RECHERCHER(javax.servlet.http.HttpServletRequest request) throws Exception {
 
@@ -205,7 +205,7 @@ public boolean performPB_RECHERCHER(javax.servlet.http.HttpServletRequest reques
 	Compte unCompte=null;
 
 	//System.out.println("ZONE="+zone);
-	//On recherche par compte exact puis par compte approché, puis par nom approché
+	//On recherche par compte exact puis par compte approchÃ©, puis par nom approchÃ©
 
 	//Si rien de saisi, recherche de tous les comptes
 	if (zone.length() == 0) {
@@ -227,7 +227,7 @@ public boolean performPB_RECHERCHER(javax.servlet.http.HttpServletRequest reques
 	}
 
 
-	//Si erreur alors pas trouvé. On traite
+	//Si erreur alors pas trouvÃ©. On traite
 	if (getTransaction().isErreur())  {
 		getTransaction().traiterErreur();
 	} 
@@ -249,8 +249,8 @@ public boolean performPB_RECHERCHER(javax.servlet.http.HttpServletRequest reques
 	return true;
 }
 /**
- * Insérez la description de la méthode ici.
- *  Date de création : (28/03/2003 08:50:20)
+ * InsÃ©rez la description de la mÃ©thode ici.
+ *  Date de crÃ©ation : (28/03/2003 08:50:20)
  * @param newAgentActivite nc.mairie.salairerappels.metier.Agent
  */
 private void setCompteEnCours(nc.mairie.droitsapplis.metier.Compte newCompte) {
@@ -262,15 +262,15 @@ private Compte getCompteEnCours() {
 /**
  * Setter de la liste:
  * LB_AGENT
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 private void setLB_AGENT(java.lang.String[] newLB_AGENT) {
 	LB_AGENT = newLB_AGENT;
 }
 /**
- * Insérez la description de la méthode ici.
- *  Date de création : (01/01/2003 09:51:40)
+ * InsÃ©rez la description de la mÃ©thode ici.
+ *  Date de crÃ©ation : (01/01/2003 09:51:40)
  * @param newListeAgent java.util.ArrayList
  */
 private void setListeCompte(java.util.ArrayList newListeCompte) {
@@ -286,49 +286,49 @@ public String getFocus() {
 	return focus;
 }
 /**
- * @param focus focus à définir.
+ * @param focus focus Ã  dÃ©finir.
  */
 public String getDefaultFocus() {
 	return getNOM_EF_NOM_AGENT();
 }
 /**
- * @param focus focus à définir.
+ * @param focus focus Ã  dÃ©finir.
  */
 public void setFocus(String focus) {
 	this.focus = focus;
 }
 /**
- * Retourne le nom du groupe de radio boutons coché pour la JSP :
+ * Retourne le nom du groupe de radio boutons cochÃ© pour la JSP :
  * RG_RECHERCHE
- * Date de création : (08/10/08 13:07:23)
- * @author : Générateur de process
+ * Date de crÃ©ation : (08/10/08 13:07:23)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_RG_RECHERCHE() {
 	return "NOM_RG_RECHERCHE";
 }
 /**
- * Retourne la valeur du radio bouton (RB_) coché dans la JSP :
+ * Retourne la valeur du radio bouton (RB_) cochÃ© dans la JSP :
  * RG_RECHERCHE
- * Date de création : (08/10/08 13:07:23)
- * @author : Générateur de process
+ * Date de crÃ©ation : (08/10/08 13:07:23)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_RG_RECHERCHE() {
 	return getZone(getNOM_RG_RECHERCHE());
 }
 /**
- * Retourne le nom du groupe de radio boutons coché pour la JSP :
+ * Retourne le nom du groupe de radio boutons cochÃ© pour la JSP :
  * RG_TRI
- * Date de création : (08/10/08 13:07:23)
- * @author : Générateur de process
+ * Date de crÃ©ation : (08/10/08 13:07:23)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_RG_TRI() {
 	return "NOM_RG_TRI";
 }
 /**
- * Retourne la valeur du radio bouton (RB_) coché dans la JSP :
+ * Retourne la valeur du radio bouton (RB_) cochÃ© dans la JSP :
  * RG_TRI
- * Date de création : (08/10/08 13:07:23)
- * @author : Générateur de process
+ * Date de crÃ©ation : (08/10/08 13:07:23)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getVAL_RG_TRI() {
 	return getZone(getNOM_RG_TRI());
@@ -336,8 +336,8 @@ public java.lang.String getVAL_RG_TRI() {
 /**
  * Retourne le nom du radio bouton pour la JSP :
  * RB_RECH_NOM
- * Date de création : (08/10/08 13:07:23)
- * @author : Générateur de process
+ * Date de crÃ©ation : (08/10/08 13:07:23)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_RB_RECH_NOM() {
 	return "NOM_RB_RECH_NOM";
@@ -345,8 +345,8 @@ public java.lang.String getNOM_RB_RECH_NOM() {
 /**
  * Retourne le nom du radio bouton pour la JSP :
  * RB_RECH_PRENOM
- * Date de création : (08/10/08 13:07:23)
- * @author : Générateur de process
+ * Date de crÃ©ation : (08/10/08 13:07:23)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_RB_RECH_PRENOM() {
 	return "NOM_RB_RECH_PRENOM";
@@ -354,8 +354,8 @@ public java.lang.String getNOM_RB_RECH_PRENOM() {
 /**
  * Retourne le nom du radio bouton pour la JSP :
  * RB_TRI_NOM
- * Date de création : (08/10/08 13:07:23)
- * @author : Générateur de process
+ * Date de crÃ©ation : (08/10/08 13:07:23)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_RB_TRI_NOM() {
 	return "NOM_RB_TRI_NOM";
@@ -363,8 +363,8 @@ public java.lang.String getNOM_RB_TRI_NOM() {
 /**
  * Retourne le nom du radio bouton pour la JSP :
  * RB_TRI_NOMATR
- * Date de création : (08/10/08 13:07:23)
- * @author : Générateur de process
+ * Date de crÃ©ation : (08/10/08 13:07:23)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_RB_TRI_NOCOMPTE() {
 	return "NOM_RB_TRI_NOCOMPTE";
@@ -378,10 +378,10 @@ private void setFirst(boolean newFirst){
 }
 
 /**
- * Méthode appelée par la servlet qui aiguille le traitement : 
+ * MÃ©thode appelÃ©e par la servlet qui aiguille le traitement : 
  * en fonction du bouton de la JSP 
- * Date de création : (01/01/03 09:35:10)
- * @author : Générateur de process
+ * Date de crÃ©ation : (01/01/03 09:35:10)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean recupererStatut(javax.servlet.http.HttpServletRequest request) throws Exception{
 
@@ -409,18 +409,18 @@ public boolean recupererStatut(javax.servlet.http.HttpServletRequest request) th
 		}
 
 	}
-	//Si pas de retour définit
+	//Si pas de retour dÃ©finit
 	
-	//setStatut(STATUT_PROCESS_APPELANT,false,"Erreur : TAG INPUT non géré par le process");
+	//setStatut(STATUT_PROCESS_APPELANT,false,"Erreur : TAG INPUT non gÃ©rÃ© par le process");
 	
-	setStatut(STATUT_MEME_PROCESS,false,"Erreur : TAG INPUT non géré par le process");
+	setStatut(STATUT_MEME_PROCESS,false,"Erreur : TAG INPUT non gÃ©rÃ© par le process");
 	return false;
 }
 /**
  * Retourne le nom de la JSP du process
- * Zone à utiliser dans un champ caché dans chaque formulaire de la JSP.
- * Date de création : (08/10/08 14:13:26)
- * @author : Générateur de process
+ * Zone Ã  utiliser dans un champ cachÃ© dans chaque formulaire de la JSP.
+ * Date de crÃ©ation : (08/10/08 14:13:26)
+ * @author : GÃ©nÃ©rateur de process
  */
 public String getJSP() {
 	return "OeAGENTSelection.jsp";
@@ -428,19 +428,19 @@ public String getJSP() {
 /**
  * Retourne le nom d'un bouton pour la JSP :
  * PB_TRI
- * Date de création : (08/10/08 14:13:26)
- * @author : Générateur de process
+ * Date de crÃ©ation : (08/10/08 14:13:26)
+ * @author : GÃ©nÃ©rateur de process
  */
 public java.lang.String getNOM_PB_TRI() {
 	return "NOM_PB_TRI";
 }
 /**
  * - Traite et affecte les zones saisies dans la JSP.
- * - Implémente les règles de gestion du process
- * - Positionne un statut en fonction de ces règles :
+ * - ImplÃ©mente les rÃ¨gles de gestion du process
+ * - Positionne un statut en fonction de ces rÃ¨gles :
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
- * Date de création : (08/10/08 14:13:26)
- * @author : Générateur de process
+ * Date de crÃ©ation : (08/10/08 14:13:26)
+ * @author : GÃ©nÃ©rateur de process
  */
 public boolean performPB_TRI(javax.servlet.http.HttpServletRequest request) throws Exception {
 	String tri = "cdidut";
