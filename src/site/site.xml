@@ -32,6 +32,7 @@
 		<menu name="Exploitation">
         	<item name="Mise en recette" href="exploitation/mise_recette.html"/>
         	<item name="Releases" href="exploitation/releases.html"/>
+        	<item name="Fichier context.xml" href="exploitation/context.html"/>
         </menu>
 
         <menu ref="reports"/>
