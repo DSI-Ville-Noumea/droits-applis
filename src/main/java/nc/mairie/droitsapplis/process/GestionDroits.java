@@ -1,4 +1,4 @@
-﻿package nc.mairie.droitsapplis.process;
+package nc.mairie.droitsapplis.process;
 
 import java.util.HashMap;
 import java.util.Iterator;

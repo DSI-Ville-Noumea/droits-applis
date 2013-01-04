@@ -1,4 +1,3 @@
-
 <project name="Droits-Applis - Gestion des droits des utilisateurs pour les applications">
 	<bannerLeft>
 		<name>DSI - Mairie de Nouméa</name>
@@ -28,6 +27,12 @@
         <menu name="Documentation">
         	<item name="Présentation" href="home.html"/>
         	<item name="Documents" href="documents.html"/>
+        </menu>
+        
+		<menu name="Exploitation">
+        	<item name="Mise en recette" href="exploitation/mise_recette.html"/>
+        	<item name="Releases" href="exploitation/releases.html"/>
+        	<item name="Fichier context.xml" href="exploitation/context.html"/>
         </menu>
 
         <menu ref="reports"/>

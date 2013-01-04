@@ -1,4 +1,4 @@
-﻿package nc.mairie.droitsapplis.metier;
+package nc.mairie.droitsapplis.metier;
 
 import nc.mairie.technique.BasicRecord;
 /**

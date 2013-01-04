@@ -29,8 +29,8 @@
 			</roles>
 		</developer>
 	</developers>
-	
-	
+
+
 	<name>droits-applis</name>
 	<url>file://///cristal/dsi$/DSI/PROJETS/1%20-%20EN%20COURS/2%20-%20M%C3%A9tiers/droits-applis/docs/htmldoc/index.html</url>
 	<description>
@@ -40,15 +40,15 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
-	
+
+
 	<scm>
 		<connection>scm:svn:https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis/trunk</connection>
 		<developerConnection>scm:svn:https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis/trunk</developerConnection>
 		<url>https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis/trunk</url>
 	</scm>
-	
-	
+
+
 
 	<distributionManagement>
 		<site>
@@ -103,8 +103,8 @@
 	</dependencies>
 
 	<build>
-	<finalName>droits-applis##${project.version}</finalName>
-	<!-- <finalName>droits-applis##${maven.build.timestamp}-${project.version}</finalName>-->
+		<finalName>${project.artifactId}##${project.version}</finalName>
+		<!-- <finalName>droits-applis##${maven.build.timestamp}-${project.version}</finalName> -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -126,7 +126,34 @@
 					</webResources>
 				</configuration>
 			</plugin>
-			
+
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<tasks>
+								<copy todir="src/site/resources/war/${project.version}"
+									file="target/${project.artifactId}##${project.version}.war">
+								</copy>
+								<checksum algorithm="md5">
+									<fileset dir="src/site/resources/war/${project.version}">
+										<include name="*.war" />
+										<include name="*.jar" />
+									</fileset>
+								</checksum>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>

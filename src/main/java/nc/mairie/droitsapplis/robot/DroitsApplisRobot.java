@@ -1,4 +1,4 @@
-﻿package nc.mairie.droitsapplis.robot;
+package nc.mairie.droitsapplis.robot;
 
 import java.util.Hashtable;
 

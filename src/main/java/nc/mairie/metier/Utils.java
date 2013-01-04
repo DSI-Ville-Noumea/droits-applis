@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created on 6 févr. 2009
  *
  * TODO To change the template for this generated file go to
