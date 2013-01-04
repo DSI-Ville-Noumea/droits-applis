@@ -1,4 +1,4 @@
-﻿package nc.mairie.droitsapplis.process;
+package nc.mairie.droitsapplis.process;
 
 import nc.mairie.technique.*;
 /**

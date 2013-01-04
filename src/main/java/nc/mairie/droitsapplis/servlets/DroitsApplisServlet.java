@@ -1,4 +1,4 @@
-﻿package nc.mairie.droitsapplis.servlets;
+package nc.mairie.droitsapplis.servlets;
 
 import javax.servlet.http.HttpServletRequest;
 

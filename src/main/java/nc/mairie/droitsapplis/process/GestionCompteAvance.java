@@ -1,4 +1,4 @@
-﻿package nc.mairie.droitsapplis.process;
+package nc.mairie.droitsapplis.process;
 
 import java.util.ArrayList;
 import nc.mairie.metier.*;

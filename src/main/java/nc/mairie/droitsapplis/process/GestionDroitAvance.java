@@ -1,14 +1,13 @@
-﻿package nc.mairie.droitsapplis.process;
+package nc.mairie.droitsapplis.process;
 
 import java.util.ArrayList;
 
-import nc.mairie.droitsapplis.metier.CompteGroupe;
 import nc.mairie.droitsapplis.metier.DroitsApp;
-import nc.mairie.droitsapplis.metier.DroitsAppBroker;
 import nc.mairie.droitsapplis.metier.Groupe;
 import nc.mairie.droitsapplis.metier.GroupeDroits;
 import nc.mairie.metier.Utils;
-import nc.mairie.technique.*;
+import nc.mairie.technique.Services;
+import nc.mairie.technique.VariableActivite;
 /**
  * Process GestionDroitAvance
  * Date de création : (30/04/09 15:21:25)
