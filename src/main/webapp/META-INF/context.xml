@@ -29,12 +29,12 @@
 		maxWait="30000" initialSize="10" removeAbandonedTimeout="500"
 		removeAbandoned="true" logAbandoned="true" minEvictableIdleTimeMillis="30000"
 		jmxEnabled="true" username="***REMOVED***" password="***REMOVED***"
-		driverClassName="com.ibm.as400.access.AS400JDBCDriver" url="jdbc:as400://noumea" />
+		driverClassName="com.ibm.as400.access.AS400JDBCDriver" url="jdbc:as400://robinnw" />
 		
 		
 	
 	<Parameter description="Hote SGBD (ROBINNW ou NOUMA)" name="HOST_SGBD" override="false" value="DS" />
-	<Parameter description="Environnement starjet (DVLP, TEST ou PROD)" name="STARJET_MODE" override="false" value="PROD" />
+	<Parameter description="Environnement starjet (DVLP, TEST ou PROD)" name="STARJET_MODE" override="false" value="DVLP" />
 	<Parameter description="Nom de l'application déclarée SIDRAP pour connaitre les droits" name="APPLICATION" override="false" value="DroitsAppli" />
 	<Parameter description="Critère de recherche LDAP" name="CRITERE_RECHERCHE_LDAP" override="false" value="samaccountname" />
 	<Parameter description="Admin LDAP" name="HOST_LDAP_ADMIN" override="false" value="cn=***REMOVED***,ou=WAS,ou=APPLI,ou=Z-users" />
