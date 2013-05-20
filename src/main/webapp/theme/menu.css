@@ -1,8 +1,8 @@
 .Dossier{
-  cursor:hand;
+  cursor:pointer;
   font-Family:Verdana;
   font-weight : bold;
-  text-decoration:non;
+  text-decoration:none;
   font-size : 15px;
 }
 

@@ -1,12 +1,12 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%-- jsf:pagecode language="java" location="/src/pagecode/MessageInformation.java" --%><%-- /jsf:pagecode --%>
-
+<%@page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
 <link rel="stylesheet" href="theme/Master.css" type="text/css">
 <title>MessageInformation</title>
-<meta http-equiv="Content-Type" content="text/html">
 <meta name="GENERATOR" content="Rational Application Developer">
+<!-- <meta http-equiv="X-UA-Compatible" content="chrome=1"> -->
 </head>
 <BODY bgcolor="#FFFFFF" BGPROPERTIES="FIXED" background="images/fond.jpg" class="sigp2-BODY">
 <jsp:useBean class="nc.mairie.commun.process.MessageInformation" id="process" scope="session"></jsp:useBean>

@@ -1,6 +1,6 @@
  /**
- * Package métier du projet droits-applis.
- * Les classes métier sont déclarées ici.
+ * Package mÃ©tier du projet droits-applis.
+ * Les classes mÃ©tier sont dÃ©clarÃ©es ici.
  */
 
 package nc.mairie.droitsapplis.metier;

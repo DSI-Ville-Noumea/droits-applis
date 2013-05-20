@@ -1,5 +1,6 @@
-﻿<!-- Sample JSP file -->
+<!-- Sample JSP file -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<%@page contentType="text/html;charset=UTF-8"%>
 <%@page import="nc.mairie.droitsapplis.client.CheckDroits"%>
 <%@page import="nc.mairie.technique.Transaction"%>
 <%@page import="java.util.ArrayList"%>
@@ -9,6 +10,7 @@
 <HEAD>
 <META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
 <META http-equiv="Content-Style-Type" content="text/css">
+<!-- <meta http-equiv="X-UA-Compatible" content="chrome=1"> -->
 <TITLE>
 Applications
 </TITLE>
@@ -65,7 +67,7 @@ onload='changerTitre(window.parent.frames("Titre").defaultTitre);'>
 var menu = new Menu(); 
 <% if (listeDroits.contains("GestionDroits")){ %>
 menu.ajouterFils(new Lien("GestionDroits", "Gestion des Droits", "Gestion des Droits pour les Applications", true));
-<% } 
+<% }
 if (listeDroits.contains("GestionGroupes")){%>
 menu.ajouterFils(new Lien("GestionGroupes", "Gestion des Groupes", "Gestion des Groupes d'utilisateurs pour les Applications", true));
 <%}

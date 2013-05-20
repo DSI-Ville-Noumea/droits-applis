@@ -1,14 +1,14 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%-- jsf:pagecode language="java" location="/src/pagecode/GestionDroits.java" --%><%-- /jsf:pagecode --%>
-
+<%@page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
 <link rel="stylesheet" href="theme/Master.css" type="text/css">
 <LINK href="theme/sigp2.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="theme/dynatablo.css" type="text/css"> 
 <title>Gestion des Droits</title>
-<meta http-equiv="Content-Type" content="text/html">
 <meta name="GENERATOR" content="Rational Application Developer">
+<!-- <meta http-equiv="X-UA-Compatible" content="chrome=1"> -->
 <script type="text/JavaScript" src="js/sortTable.js"></script>
 <script type="text/JavaScript" src="js/dynatablo.js"></script>
 </head>

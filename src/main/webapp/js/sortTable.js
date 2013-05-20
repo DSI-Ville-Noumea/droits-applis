@@ -235,7 +235,7 @@ function FormatForType(itm) {
   }
 
 // If the item matches a currency pattern (starts with a dollar or negative dollar sign)
-  if (itm.match(/^[£$]|(^-)/)) {
+  if (itm.match(/^[Â£$]|(^-)/)) {
    // Replace anything that is not part of a number (decimal pt, neg sign, or 0 through 9) with an empty string.  
    sortValue = itm.replace(/[^0-9.-]/g,'');
    if (isNaN(sortValue)) { 

@@ -21,6 +21,6 @@ event.returnValue = false;
 return false;
 }
 }
-document.oncontextmenu = fonctions_de_la_page_desactivees; 
-document.onmousedown = click_droit_desactive; 
+//document.oncontextmenu = fonctions_de_la_page_desactivees; 
+//document.onmousedown = click_droit_desactive; 
 

@@ -3,10 +3,10 @@ var courant='';
 
 // Constructeur de la classe Menu
 function Menu() { 
-//     Déclaration des variables membres (propriétés) 
+//     DÃ©claration des variables membres (propriÃ©tÃ©s) 
     this.listeObjet = new Array();
     this.niveau=0;
-//     Déclaration d'une fonction membre (méthode) 
+//     DÃ©claration d'une fonction membre (mÃ©thode) 
     this.ajouterFils= ajouterObjet;
     this.incrementeFils = incrementeNiveau;
     this.afficher = afficherMenu;
@@ -36,14 +36,14 @@ function afficherMenuHoriz() {
  
 // Constructeur de la classe Lien
 function Lien(aDroit, aTitreLien, aTitre, actif) { 
-//     Déclaration des variables membres (propriétés) 
+//     DÃ©claration des variables membres (propriÃ©tÃ©s) 
     this.droit= aDroit;
     this.titreLien=aTitreLien;
     this.titre= aTitre; 
     this.isActif = actif;
     this.niveau=0;
     this.type='lien';
-//     Déclaration d'une fonction membre (méthode) 
+//     DÃ©claration d'une fonction membre (mÃ©thode) 
     this.afficher= afficherLien; 
     this.afficherhoriz= afficherLienHoriz; 
 } 
@@ -51,7 +51,7 @@ function Lien(aDroit, aTitreLien, aTitre, actif) {
 // Implantation du code de la fonction membre 
 function afficherLien() {
 	var trouve = false;
-//	Vérif du droit de l'utilisateur
+//	VÃ©rif du droit de l'utilisateur
 	var a;
 	for (a in listeDroits) {
 		if (listeDroits[a] == this.droit) {
@@ -59,7 +59,7 @@ function afficherLien() {
 		}
 	}
 
-//	Si droit trouvé
+//	Si droit trouvÃ©
 	if (trouve) {
 		var comment=''
 //		Si menu actif
@@ -83,7 +83,7 @@ function afficherLien() {
 
 function afficherLienHoriz() {
 	var trouve = false;
-//	Vérif du droit de l'utilisateur
+//	VÃ©rif du droit de l'utilisateur
 	var a;
 	for (a in listeDroits) {
 		if (listeDroits[a] == this.droit) {
@@ -91,7 +91,7 @@ function afficherLienHoriz() {
 		}
 	}
 
-//	Si droit trouvé
+//	Si droit trouvÃ©
 	if (trouve) {
 		var comment=''
 //		Si menu actif
@@ -115,19 +115,19 @@ function afficherLienHoriz() {
 
 // Constructeur de la classe Dossier
 function Dossier(aNom, aTitre) { 
-//     Déclaration des variables membres (propriétés) 
+//     DÃ©claration des variables membres (propriÃ©tÃ©s) 
     this.nom= aNom; 
     this.titre= aTitre;
     this.listeObjet = new Array();
     this.niveau=1;
     this.type='dossier';
-//     Déclaration d'une fonction membre (méthode) 
+//     DÃ©claration d'une fonction membre (mÃ©thode) 
     this.afficher= afficherDossier; 
     this.ajouterFils= ajouterObjet;
     this.incrementeFils = incrementeNiveau;
 } 
 
-//Ajoute un objet à la liste
+//Ajoute un objet Ã  la liste
 function ajouterObjet (obj) {
    var objInc=this.incrementeFils(obj);
    var v = new Array(objInc);
@@ -138,7 +138,7 @@ function ajouterObjet (obj) {
 function incrementeNiveau(obj){
    obj.niveau=this.niveau + 1;
    if (obj.type=='dossier') {
-//      parcours des éléments et incrémente niveau
+//      parcours des Ã©lÃ©ments et incrÃ©mente niveau
 	var a;
 	for (a in obj.listeObjet) {
 		var v = obj.incrementeFils(obj.listeObjet[a])
@@ -155,8 +155,8 @@ function afficherDossier() {
 //	res = 	'<span id="'+this.nom+'" onClick="showhide('+this.nom+'o,'+this.nom+'sign); changerTitre(this.title);" class="Dossier" TITLE="'+this.titre+'">'+
 	res = 	'<span id="'+this.nom+'" onClick="showhide('+this.nom+'o,'+this.nom+'sign)" class="Dossier" TITLE="'+this.titre+'">'+
 		'<font style="text-decoration:none"><IMG id="'+this.nom+'sign" src="images/menu_dossier_clos.gif"></font> '+this.titre+'</span><br>\n'+
-		'<SPAN id="'+this.nom+'o" style="display:\'none\'">';
-//	parcours des éléments et rajout
+		'<SPAN id="'+this.nom+'o" style="display:none">';
+//	parcours des Ã©lÃ©ments et rajout
 	var a;
 	var contenu = ''
 	for (a in this.listeObjet) {

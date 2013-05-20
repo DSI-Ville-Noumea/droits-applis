@@ -1,8 +1,10 @@
-﻿<!-- Sample JSP file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Sample JSP file --> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<%@page contentType="text/html;charset=UTF-8"%>
 <HTML>
 <HEAD>
 <META name="GENERATOR" content="IBM WebSphere Page Designer V3.5.3 for Windows">
 <META http-equiv="Content-Style-Type" content="text/css">
+<!-- <meta http-equiv="X-UA-Compatible" content="chrome=1"> -->
 <LINK href="theme/sigp2.css" rel="stylesheet" type="text/css">
 <TITLE>Sélection d'un agent</TITLE>
 

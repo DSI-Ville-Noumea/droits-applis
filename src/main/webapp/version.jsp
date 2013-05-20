@@ -1,4 +1,4 @@
-﻿<%@page import="java.net.InetAddress"%>
+<%@page import="java.net.InetAddress"%>
 annuaire.version=${version}
 annuaire.localhost.hostaddress=<%=InetAddress.getLocalHost().getHostAddress() %>
 annuaire.localhost.canonicalhostname=<%=InetAddress.getLocalHost().getCanonicalHostName() %>
