@@ -1,8 +1,8 @@
 <%@page import="java.net.InetAddress"%>
-annuaire.version=${version}
-annuaire.localhost.hostaddress=<%=InetAddress.getLocalHost().getHostAddress() %>
-annuaire.localhost.canonicalhostname=<%=InetAddress.getLocalHost().getCanonicalHostName() %>
-annuaire.localhost.hostname=<%=InetAddress.getLocalHost().getHostName() %>
+${artifactId}.version=${version}
+${artifactId}.localhost.hostaddress=<%=InetAddress.getLocalHost().getHostAddress() %>
+${artifactId}.localhost.canonicalhostname=<%=InetAddress.getLocalHost().getCanonicalHostName() %>
+${artifactId}.localhost.hostname=<%=InetAddress.getLocalHost().getHostName() %>
 <% 
 HttpSession theSession = request.getSession( false );
 
