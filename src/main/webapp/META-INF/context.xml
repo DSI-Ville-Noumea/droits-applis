@@ -24,7 +24,7 @@
 	<Parameter name="STARJET_SERVER" value="STARJET" 
 	    description="Serveur starjet (nom du serveur)" override="false" />
 	
-	<Parameter name="APPLICATION" value="Annuaire" 
+	<Parameter name="APPLICATION" value="DroitsAppli" 
 		description="Nom de l'application déclarée SIDRAP pour connaître les droits" override="false" />
 	
 	<Parameter name="CRITERE_RECHERCHE_LDAP" value="samaccountname"
