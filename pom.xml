@@ -38,6 +38,8 @@
 	</description>
 
 	<properties>
+		<artifactId>${project.artifactId}</artifactId>
+		<version>${project.version}</version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
