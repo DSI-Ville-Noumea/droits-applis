@@ -94,7 +94,7 @@
 	</dependencies>
 
 	<build>
-<!-- 		<finalName>${project.artifactId}##${project.version}</finalName> -->
+		<!-- <finalName>${project.artifactId}##${project.version}</finalName> -->
 		<!-- <finalName>droits-applis##${maven.build.timestamp}-${project.version}</finalName> -->
 		<plugins>
 			<plugin>
@@ -126,9 +126,16 @@
 						<phase>package</phase>
 						<configuration>
 							<tasks>
-								<copy todir="src/site/resources/war/${project.version}"
-									file="target/${project.artifactId}##${project.version}.war">
+								<copy
+									file="${project.build.directory}/${project.build.finalName}.${project.packaging}"
+									tofile="src/site/resources/war/${project.version}/${project.artifactId}##${project.version}.${project.packaging}">
 								</copy>
+								<copy
+									file="${project.build.directory}/${project.build.finalName}.${project.packaging}"
+									tofile="${project.build.directory}/${project.artifactId}##${project.version}.${project.packaging}">
+								</copy>
+								<delete
+									file="${project.build.directory}/${project.build.finalName}.${project.packaging}" />
 								<checksum algorithm="md5">
 									<fileset dir="src/site/resources/war/${project.version}">
 										<include name="*.war" />
