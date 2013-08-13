@@ -196,7 +196,7 @@ included, depending on the components used on the page.Default is false.</descri
 		<servlet-name>DroitsApplisServlet</servlet-name>
 		<servlet-class>nc.mairie.droitsapplis.servlets.DroitsApplisServlet
 		</servlet-class>
-		<load-on-startup>-1</load-on-startup>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
