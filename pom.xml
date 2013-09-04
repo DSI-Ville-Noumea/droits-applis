@@ -41,13 +41,14 @@
 		<artifactId>${project.artifactId}</artifactId>
 		<version>${project.version}</version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<svnurl>https://svn.ville-noumea.nc/sed/droits-applis</svnurl>
 	</properties>
 
 
 	<scm>
-		<connection>scm:svn:https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis/trunk</connection>
-		<developerConnection>scm:svn:https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis/trunk</developerConnection>
-		<url>https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis/trunk</url>
+		<connection>scm:svn:${svnurl}/trunk</connection>
+		<developerConnection>scm:svn:${svnurl}/trunk</developerConnection>
+		<url>${svnurl}/trunk</url>
 	</scm>
 
 
@@ -231,9 +232,9 @@
 				<artifactId>maven-project-info-reports-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<webAccessUrl>https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis/trunk</webAccessUrl>
-					<anonymousConnection>scm:svn:https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis/trunk</anonymousConnection>
-					<developerConnection>scm:svn:https://dvlp.site-mairie.noumea.nc:8080/svn/droits-applis/trunk</developerConnection>
+					<webAccessUrl>${svnurl}/trunk</webAccessUrl>
+					<anonymousConnection>scm:svn:${svnurl}/trunk</anonymousConnection>
+					<developerConnection>scm:svn:${svnurl}/trunk</developerConnection>
 				</configuration>
 				<reportSets>
 					<reportSet>
