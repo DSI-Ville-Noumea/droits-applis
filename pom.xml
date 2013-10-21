@@ -71,11 +71,13 @@
 		<dependency>
 			<groupId>nc.mairie</groupId>
 			<artifactId>DroitsApplisClient</artifactId>
-			<version>1.0.2</version>
+			<version>1.0.3</version>
 		</dependency>
-
-
-
+		<dependency>
+			<groupId>nc.mairie</groupId>
+			<artifactId>framework</artifactId>
+			<version>1.8</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
