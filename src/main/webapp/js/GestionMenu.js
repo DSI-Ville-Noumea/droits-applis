@@ -17,7 +17,7 @@ function Menu() {
 function afficherMenu() { 
 	var res = '';
 	var a;
-//	parcouirs des objets et de mande d'affichage
+//	parcouirs des objets et deb mande d'affichage
 	for (a in this.listeObjet) {
 		res += this.listeObjet[a].afficher();
 	}
@@ -58,21 +58,21 @@ function afficherLien() {
 			trouve=true;
 		}
 	}
-
+	
 //	Si droit trouvé
 	if (trouve) {
 		var comment=''
 //		Si menu actif
 		if (this.isActif) {
 			classe = 'LienActif';
-			onclick = 'envoieFormulaire(this); changerTitre(this.title);'
+			onClick = 'envoieFormulaire(this); changerTitre(this.title);'
 		} else {
 			classe = 'LienInactif';
-			onclick = ''
+			onClick = ''
 			comment=' EN CONSTRUCTION ';
 		}
 
-		var temp = 	'<span id="'+this.droit+'" class="'+classe+'" TITLE="'+this.titre+'" onClick="'+onclick+'">'+
+		var temp = 	'<span id="'+this.droit+'" class="'+classe+'" TITLE="'+this.titre+'" onClick="'+onClick+'">'+
 				'<img src="images/menu_lien.gif"> '+this.titreLien+comment+'<br>'+
 				'</span>';
 		return temp;
@@ -90,21 +90,22 @@ function afficherLienHoriz() {
 			trouve=true;
 		}
 	}
-
+	
+	
 //	Si droit trouvé
 	if (trouve) {
 		var comment=''
 //		Si menu actif
 		if (this.isActif) {
 			classe = 'LienActif';
-			onclick = 'envoieFormulaire(this); changerTitre(this.title);'
+			onClick = 'envoieFormulaire(this); changerTitre(this.title);'
 		} else {
 			classe = 'LienInactif';
-			onclick = ''
+			onClick = ''
 			comment=' EN CONSTRUCTION ';
 		}
 
-		var temp = 	'<span id="'+this.droit+'" class="'+classe+'" TITLE="'+this.titre+'" onClick="'+onclick+'">'+
+		var temp = 	'<span id="'+this.droit+'" class="'+classe+'" TITLE="'+this.titre+'" onClick="'+onClick+'">'+
 				'<img src="images/menu_lien.gif"> '+this.titreLien+comment+'</span>'
 				+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 		return temp;
