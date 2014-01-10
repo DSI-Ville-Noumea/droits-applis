@@ -1,6 +1,5 @@
 package nc.mairie.droitsapplis.metier;
 
-import nc.mairie.technique.MairieMessages;
 /**
  * Objet métier Groupe
  */
@@ -75,7 +74,7 @@ public String toString() {
  * Retourne un ArrayList d'objet métier : Groupe.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception{
+public static java.util.ArrayList<Groupe> listerGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	Groupe unGroupe = new Groupe();
 	return unGroupe.getMyGroupeBroker().listerGroupe(aTransaction);
 }

@@ -15,6 +15,10 @@ import nc.mairie.technique.*;
  * @author : Générateur de process
 */
 public class GestionGroupeAvance extends nc.mairie.technique.BasicProcess {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -318398992548773858L;
 	private java.lang.String[] LB_GROUPES_DROITE_COMPTE;
 	private java.lang.String[] LB_GROUPES_GAUCHE_COMPTE;
 	private java.lang.String[] LB_GROUPES_DROITE_DROIT;

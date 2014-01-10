@@ -32,8 +32,8 @@ protected java.lang.String definirNomTable() {
 /**
  * Retourne le mappage de chaque colonne de la table.
  */
-protected java.util.Hashtable definirMappageTable() throws NoSuchFieldException {
-	java.util.Hashtable mappage = new java.util.Hashtable();
+protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws NoSuchFieldException {
+	java.util.Hashtable<String, BasicRecord>  mappage = new java.util.Hashtable<String, BasicRecord> ();
 	mappage.put("CDGROU", new BasicRecord("CDGROU", "INTEGER", getMyGroupeDroits().getClass().getField("cdgrou"), "STRING"));
 	mappage.put("CDDRAP", new BasicRecord("CDDRAP", "INTEGER", getMyGroupeDroits().getClass().getField("cddrap"), "STRING"));
 	return mappage;
@@ -63,14 +63,14 @@ public boolean supprimerGroupeDroits(nc.mairie.technique.Transaction aTransactio
  * Retourne un ArrayList d'objet métier : GroupeDroits.
  * @return java.util.ArrayList
  */
-public java.util.ArrayList listerGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws Exception {
+public java.util.ArrayList<GroupeDroits> listerGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+"");
 }
 
-public java.util.ArrayList listerGroupeDroits(nc.mairie.technique.Transaction aTransaction, String droit) throws Exception {
+public java.util.ArrayList<GroupeDroits> listerGroupeDroits(nc.mairie.technique.Transaction aTransaction, String droit) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" WHERE CDDRAP='"+droit+"'");
 }
-public java.util.ArrayList listerGroupeDroitsfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception {
+public java.util.ArrayList<GroupeDroits> listerGroupeDroitsfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" WHERE CDGROU='"+groupe+"'");
 }
 /**

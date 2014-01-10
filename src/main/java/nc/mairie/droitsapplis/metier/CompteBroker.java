@@ -44,8 +44,8 @@ protected final String definirNomTable() {
 /**
  * Retourne le mappage de chaque colonne de la table.
  */
-protected final java.util.Hashtable definirMappageTable() throws NoSuchFieldException {
-	java.util.Hashtable mappage = new java.util.Hashtable();
+protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws NoSuchFieldException {
+	java.util.Hashtable<String, BasicRecord>  mappage = new java.util.Hashtable<String, BasicRecord> ();
 	mappage.put("CDIDUT", new BasicRecord("CDIDUT", "CHAR", getMyCompte().getClass().getField("cdidut"), "STRING"));
 	mappage.put("LIIDUT", new BasicRecord("LIIDUT", "CHAR", getMyCompte().getClass().getField("liidut"), "STRING"));
 	mappage.put("PRINTER", new BasicRecord("PRINTER", "CHAR", getMyCompte().getClass().getField("printer"), "STRING"));
@@ -92,16 +92,16 @@ public final boolean supprimerCompte(final Transaction aTransaction) throws Exce
  * Retourne un ArrayList d'objet métier : Compte.
  * @return java.util.ArrayList
  */
-public java.util.ArrayList listerCompte(nc.mairie.technique.Transaction aTransaction) throws Exception {
+public java.util.ArrayList<Compte> listerCompte(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" order by LIIDUT asc");
 }
-public java.util.ArrayList listerCompteOrderByCode(nc.mairie.technique.Transaction aTransaction) throws Exception {
+public java.util.ArrayList<Compte> listerCompteOrderByCode(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" order by CDIDUT asc");
 }
-public java.util.ArrayList listerComptesfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception {
+public java.util.ArrayList<Compte> listerComptesfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" where CDIDUT IN (SELECT CDIDUT from MAIRIE.SIGRUT where CDGROU = "+groupe+")");
 }
-public java.util.ArrayList listerComptesfromGroupeOrderByCode(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception {
+public java.util.ArrayList<Compte> listerComptesfromGroupeOrderByCode(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" where CDIDUT IN (SELECT CDIDUT from MAIRIE.SIGRUT where CDGROU = "+groupe+") order by CDIDUT asc");
 }
 
@@ -118,11 +118,11 @@ public final Compte chercherCompte(final Transaction aTransaction, final String 
 	return (Compte) executeSelect(aTransaction, "select * from " + getTable() + " where upper(CDIDUT) = '" + sCompte + "' order by CDIDUT asc");
 }
 
-public java.util.ArrayList listerCompteLikeCompte(nc.mairie.technique.Transaction aTransaction, String sCompte) throws Exception {
+public java.util.ArrayList<Compte> listerCompteLikeCompte(nc.mairie.technique.Transaction aTransaction, String sCompte) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" where upper(CDIDUT) like '%"+sCompte+"%' order by CDIDUT asc");
 }
 
-public java.util.ArrayList listerCompteLikeNom(nc.mairie.technique.Transaction aTransaction, String sNom) throws Exception {
+public java.util.ArrayList<Compte> listerCompteLikeNom(nc.mairie.technique.Transaction aTransaction, String sNom) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" where upper(LIIDUT) like '%"+sNom+"%' order by LIIDUT asc");
 }
 }

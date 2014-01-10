@@ -1,10 +1,5 @@
 package nc.mairie.droitsapplis.process;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
-import nc.mairie.droitsapplis.metier.DroitsApp;
 import nc.mairie.droitsapplis.metier.Groupe;
 import nc.mairie.technique.*;
 /**
@@ -13,6 +8,10 @@ import nc.mairie.technique.*;
  * @author : Générateur de process
 */
 public class GestionGroupes extends nc.mairie.technique.BasicProcess {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8533704049179271994L;
 	public static final int STATUT_EDITGROUPE=1;
 	public static final int STATUT_RETOUR=4;
 	

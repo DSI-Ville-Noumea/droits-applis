@@ -1,6 +1,5 @@
 package nc.mairie.droitsapplis.metier;
 
-import nc.mairie.technique.MairieMessages;
 /**
  * Objet métier GroupeDroits
  */
@@ -62,7 +61,7 @@ public String toString() {
  * Retourne un ArrayList d'objet métier : GroupeDroits.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws Exception{
+public static java.util.ArrayList<GroupeDroits> listerGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	GroupeDroits unGroupeDroits = new GroupeDroits();
 	return unGroupeDroits.getMyGroupeDroitsBroker().listerGroupeDroits(aTransaction);
 }
@@ -71,12 +70,12 @@ public static java.util.ArrayList listerGroupeDroits(nc.mairie.technique.Transac
  * Retourne un ArrayList d'objet métier : GroupeDroits.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerGroupeDroits(nc.mairie.technique.Transaction aTransaction, String droit) throws Exception{
+public static java.util.ArrayList<GroupeDroits> listerGroupeDroits(nc.mairie.technique.Transaction aTransaction, String droit) throws Exception{
 	GroupeDroits unGroupeDroits = new GroupeDroits();
 	return unGroupeDroits.getMyGroupeDroitsBroker().listerGroupeDroits(aTransaction, droit);
 }
 
-public static java.util.ArrayList listerGroupeDroitsfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception{
+public static java.util.ArrayList<GroupeDroits> listerGroupeDroitsfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception{
 	GroupeDroits unGroupeDroits = new GroupeDroits();
 	return unGroupeDroits.getMyGroupeDroitsBroker().listerGroupeDroitsfromGroupe(aTransaction, groupe);
 }

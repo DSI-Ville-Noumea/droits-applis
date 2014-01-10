@@ -20,7 +20,7 @@ Applications
 
 	nc.mairie.technique.UserAppli aUserAppli = (nc.mairie.technique.UserAppli)nc.mairie.technique.VariableGlobale.recuperer(request,nc.mairie.technique.VariableGlobale.GLOBAL_USER_APPLI);
 	
-	java.util.ArrayList listeDroits = aUserAppli.getListeDroits();
+	java.util.ArrayList<String> listeDroits = aUserAppli.getListeDroits();
 	
 String res = 	"<script language=\"javascript\">\n"+
 		"var listeDroits = new Array(\n";

@@ -32,8 +32,8 @@ protected java.lang.String definirNomTable() {
 /**
  * Retourne le mappage de chaque colonne de la table.
  */
-protected java.util.Hashtable definirMappageTable() throws NoSuchFieldException {
-	java.util.Hashtable mappage = new java.util.Hashtable();
+protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws NoSuchFieldException {
+	java.util.Hashtable<String, BasicRecord>  mappage = new java.util.Hashtable<String, BasicRecord> ();
 	mappage.put("LIGROU", new BasicRecord("LIGROU", "CHAR", getMyGroupe().getClass().getField("ligrou"), "STRING"));
 	mappage.put("CDGROU", new BasicRecord("CDGROU", "INTEGER", getMyGroupe().getClass().getField("cdgrou"), "IDENTITY"));
 	mappage.put("DEFINITION", new BasicRecord("DEFINITION", "CHAR", getMyGroupe().getClass().getField("definition"), "STRING"));
@@ -64,7 +64,7 @@ public boolean supprimerGroupe(nc.mairie.technique.Transaction aTransaction) thr
  * Retourne un ArrayList d'objet métier : Groupe.
  * @return java.util.ArrayList
  */
-public java.util.ArrayList listerGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception {
+public java.util.ArrayList<Groupe> listerGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" order by LIGROU");
 }
 /**

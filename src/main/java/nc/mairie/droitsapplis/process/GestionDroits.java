@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import nc.mairie.droitsapplis.metier.CompteGroupe;
 import nc.mairie.droitsapplis.metier.DroitsApp;
 import nc.mairie.droitsapplis.metier.Groupe;
 import nc.mairie.droitsapplis.metier.GroupeDroits;
@@ -15,6 +14,10 @@ import nc.mairie.technique.*;
  * @author : Générateur de process
 */
 public class GestionDroits extends nc.mairie.technique.BasicProcess {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2515995159541312217L;
 	public static final int STATUT_EDITDROIT=1;
 	public static final int STATUT_RETOUR=4;
 	
@@ -358,8 +361,8 @@ public String generateTABLO_DROITS() throws Exception, NumberFormatException{
 		
 		//Traitement pour afficher les croix dans le tableau
 		boolean ispaire=false;
-		for ( Iterator iter = hTMapDroits.entrySet().iterator(); iter.hasNext(); ) {
-			Map.Entry<String,boolean[]> ent = (Map.Entry) iter.next();
+		for ( Iterator<Map.Entry<String,boolean[]> > iter = hTMapDroits.entrySet().iterator(); iter.hasNext(); ) {
+			Map.Entry<String,boolean[]> ent = iter.next();
 			//La clé de la HashMap
 			String droitCourant = ent.getKey();
 			DroitsApp daEnCours=DroitsApp.chercherDroitsApp(getTransaction(), droitCourant);

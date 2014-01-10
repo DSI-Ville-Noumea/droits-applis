@@ -88,7 +88,7 @@ public final String toString() {
  * Retourne un ArrayList d'objet métier : CompteGroupe.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerCompteGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception{
+public static java.util.ArrayList<CompteGroupe> listerCompteGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	CompteGroupe unCompteGroupe = new CompteGroupe();
 	return unCompteGroupe.getMyCompteGroupeBroker().listerCompteGroupe(aTransaction);
 }
@@ -97,7 +97,7 @@ public static java.util.ArrayList listerCompteGroupe(nc.mairie.technique.Transac
  * Retourne un ArrayList d'objet métier : CompteGroupe.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerCompteGroupe(nc.mairie.technique.Transaction aTransaction, String sCompte) throws Exception{
+public static java.util.ArrayList<CompteGroupe> listerCompteGroupe(nc.mairie.technique.Transaction aTransaction, String sCompte) throws Exception{
 	CompteGroupe unCompteGroupe = new CompteGroupe();
 	return unCompteGroupe.getMyCompteGroupeBroker().listerCompteGroupe(aTransaction, sCompte);
 }
@@ -106,7 +106,7 @@ public static java.util.ArrayList listerCompteGroupe(nc.mairie.technique.Transac
  * Retourne un ArrayList d'objet métier : CompteGroupe.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerCompteGroupefromGroupe(nc.mairie.technique.Transaction aTransaction, String sGroupe) throws Exception{
+public static java.util.ArrayList<CompteGroupe> listerCompteGroupefromGroupe(nc.mairie.technique.Transaction aTransaction, String sGroupe) throws Exception{
 	CompteGroupe unCompteGroupe = new CompteGroupe();
 	return unCompteGroupe.getMyCompteGroupeBroker().listerCompteGroupefromGroupe(aTransaction, sGroupe);
 }

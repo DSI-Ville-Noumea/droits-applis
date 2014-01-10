@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%-- jsf:pagecode language="java" location="/src/pagecode/DroitsApplis.java" --%><%-- /jsf:pagecode --%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html;charset=UTF-8"%>
 <%@page language="java"%>
 <html>
@@ -26,7 +27,7 @@
 
 	nc.mairie.technique.UserAppli aUserAppli = (nc.mairie.technique.UserAppli)nc.mairie.technique.VariableGlobale.recuperer(request,nc.mairie.technique.VariableGlobale.GLOBAL_USER_APPLI);
 	
-	java.util.ArrayList listeDroits = aUserAppli.getListeDroits();
+	ArrayList<String> listeDroits = aUserAppli.getListeDroits();
 	
  if (null==listeDroits||listeDroits.size()==0) {%>
 <BODY>
@@ -36,7 +37,7 @@
 </BODY>
 <% } else { %>
 
-<frameset rows="13%, *" frameborder="0" border="0" framespacing="0">
+<frameset rows="13%, *" frameborder="no" border="0" framespacing="0">
 	<FRAME src="DroitsTitre.jsp" name="Titre" scrolling="NO" noresize
 		marginwidth="0" marginheight="0">
 	<FRAME src="DroitsMain.jsp" name="Main" marginwidth="0"

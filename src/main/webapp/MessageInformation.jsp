@@ -8,7 +8,7 @@
 <meta name="GENERATOR" content="Rational Application Developer">
 <!-- <meta http-equiv="X-UA-Compatible" content="chrome=1"> -->
 </head>
-<BODY bgcolor="#FFFFFF" BGPROPERTIES="FIXED" background="images/fond.jpg" class="sigp2-BODY">
+<BODY bgcolor="#FFFFFF" background="images/fond.jpg" class="sigp2-BODY">
 <jsp:useBean class="nc.mairie.commun.process.MessageInformation" id="process" scope="session"></jsp:useBean>
 <%String message = process.getVAL_ST_MESSAGE();%>
 <TABLE border="0" width="100%" height="100%" style="text-align : center;">

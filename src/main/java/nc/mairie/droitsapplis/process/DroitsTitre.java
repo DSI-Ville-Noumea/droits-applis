@@ -1,11 +1,6 @@
 package nc.mairie.droitsapplis.process;
 
-import java.util.ArrayList;
 
-import com.sun.jmx.mbeanserver.GetPropertyAction;
-
-import nc.mairie.droitsapplis.client.CheckDroits;
-import nc.mairie.servlets.Frontale;
 import nc.mairie.technique.*;
 /**
  * Process SeatIndex
@@ -13,7 +8,10 @@ import nc.mairie.technique.*;
  * @author : Générateur de process
 */
 public class DroitsTitre extends nc.mairie.technique.BasicProcess {
-	private String focus = null;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4002940492718395322L;
 	public String dpt = "toto";
 /**
  * Initialisation des zones à afficher dans la JSP
@@ -26,7 +24,7 @@ public class DroitsTitre extends nc.mairie.technique.BasicProcess {
 public void initialiseZones(javax.servlet.http.HttpServletRequest request) throws Exception{
 	//System.out.println("PASS initZone DroitsTitre");
 	UserAppli aUser = (UserAppli)nc.mairie.technique.VariableGlobale.recuperer(request,nc.mairie.technique.VariableGlobale.GLOBAL_USER_APPLI);
-	java.util.Hashtable h = nc.mairie.technique.MairieLDAP.chercherUserLDAPAttributs(aUser.getUserName());
+	java.util.Hashtable<Object, Object> h = nc.mairie.technique.MairieLDAP.chercherUserLDAPAttributs(aUser.getUserName());
 	dpt = (String)h.get("department");
 	/*
 	ArrayList listService = Service.chercherListServiceAccro(getTransaction(),dpt);

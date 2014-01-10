@@ -1,12 +1,15 @@
 package nc.mairie.droitsapplis.process;
 
-import nc.mairie.technique.*;
 /**
  * Process Accueil
  * Date de création : (13/05/09 12:35:45)
  * @author : Générateur de process
 */
 public class Accueil extends nc.mairie.technique.BasicProcess {
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5103979130520295106L;
 /**
  * Initialisation des zones à afficher dans la JSP
  * Alimentation des listes, s'il y en a, avec setListeLB_XXX()

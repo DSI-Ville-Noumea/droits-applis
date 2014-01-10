@@ -3,13 +3,22 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>nc.mairie</groupId>
 	<artifactId>droits-applis</artifactId>
-	<version>1.6</version>
+	<version>2.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<organization>
 		<name>Mairie de Nouméa</name>
 		<url>http://www.ville-noumea.nc</url>
 	</organization>
 	<developers>
+		<developer>
+			<id>BOULU72</id>
+			<name>Luc BOURDIL</name>
+			<email>noulu72@ville-noumea.nc</email>
+			<url>svpatdi/annuaire/vcards/904117.vcf</url>
+			<roles>
+				<role>Développeur</role>
+			</roles>
+		</developer>
 		<developer>
 			<id>FONOL77</id>
 			<name>Olivier FONTENEAU</name>
@@ -37,11 +46,17 @@
 	Droits-Applis est l'application de gestion des droits des utilisateurs sur les applications Mairie.
 	</description>
 
+	<prerequisites>
+   		<maven>2.2.1</maven>
+ 	</prerequisites>
+
 	<properties>
 		<artifactId>${project.artifactId}</artifactId>
 		<version>${project.version}</version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<svnurl>https://svn.ville-noumea.nc/sed/droits-applis</svnurl>
+		<droitsapplisclient_version>2.0</droitsapplisclient_version>
+		<framework_version>2.0</framework_version>
 	</properties>
 
 
@@ -71,12 +86,12 @@
 		<dependency>
 			<groupId>nc.mairie</groupId>
 			<artifactId>DroitsApplisClient</artifactId>
-			<version>1.0.4</version>
+			<version>${droitsapplisclient_version}</version>
 		</dependency>
 		<dependency>
 			<groupId>nc.mairie</groupId>
 			<artifactId>framework</artifactId>
-			<version>1.8</version>
+			<version>${framework_version}</version>
 		</dependency>
 
 		<dependency>
@@ -88,12 +103,12 @@
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
-			<version>2.2.4</version>
+			<version>2.2.5</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
-			<version>2.2.4</version>
+			<version>2.2.5</version>
 		</dependency>
 	</dependencies>
 
@@ -103,8 +118,38 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.5</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.4</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.15</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.2</version>
+				<version>2.3</version>
 				<configuration>
 					<webResources>
 						<resource>
@@ -154,7 +199,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.3</version>
 				<configuration>
 					<reportPlugins>
 						<plugin>
@@ -192,11 +237,6 @@
 							<version>2.10</version>
 						</plugin>
 						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-project-info-reports-plugin</artifactId>
-							<version>2.4</version>
-						</plugin>
-						<plugin>
 							<groupId>org.codehaus.mojo</groupId>
 							<artifactId>taglist-maven-plugin</artifactId>
 							<version>2.4</version>
@@ -217,7 +257,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-scm-plugin</artifactId>
-				<version>1.6</version>
+				<version>1.8.1</version>
 			</plugin>
 		</plugins>
 	</build>
@@ -227,7 +267,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.7</version>
 				<configuration>
 					<webAccessUrl>${svnurl}/trunk</webAccessUrl>
 					<anonymousConnection>scm:svn:${svnurl}/trunk</anonymousConnection>

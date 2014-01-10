@@ -13,6 +13,13 @@ import nc.mairie.technique.UserAppli;
 
 public class DroitsApplisServlet extends Frontale {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2969189307201982961L;
+
+
+
 	@Override
 	protected Robot getServletRobot() {
 		return new DroitsApplisRobot();

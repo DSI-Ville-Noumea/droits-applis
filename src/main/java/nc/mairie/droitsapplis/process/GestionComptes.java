@@ -1,6 +1,5 @@
 package nc.mairie.droitsapplis.process;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -15,6 +14,10 @@ import nc.mairie.technique.*;
  * @author : Générateur de process
 */
 public class GestionComptes extends nc.mairie.technique.BasicProcess {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3663117149158487055L;
 	public static final int STATUT_EDITCOMPTE=1;
 	public static final int STATUT_AJOUTCOMPTE=2;
 	public static final int STATUT_RETOUR=4;
@@ -328,8 +331,8 @@ public String generateTABLO_COMPTES() throws Exception, NumberFormatException{
 	
 	//Traitement pour afficher les croix dans le tableau
 	boolean ispaire=false;
-	for ( Iterator iter = hTMapComptes.entrySet().iterator(); iter.hasNext(); ) {
-		Map.Entry<String,Boolean[]> ent = (Map.Entry) iter.next();
+	for ( Iterator<Map.Entry<String,Boolean[]>> iter = hTMapComptes.entrySet().iterator(); iter.hasNext(); ) {
+		Map.Entry<String,Boolean[]> ent = iter.next();
 		//La clé de la HashMap
 		String compteCourant = ent.getKey();
 		//La Valeur de la HashMap

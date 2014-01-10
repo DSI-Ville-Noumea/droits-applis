@@ -110,19 +110,19 @@ public final String toString() {
  * Retourne un ArrayList d'objet métier : Compte.
  * @return java.util.ArrayList
  */
-public static java.util.ArrayList listerCompte(nc.mairie.technique.Transaction aTransaction) throws Exception{
+public static java.util.ArrayList<Compte> listerCompte(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	Compte unCompte = new Compte();
 	return unCompte.getMyCompteBroker().listerCompte(aTransaction);
 }
-public static java.util.ArrayList listerCompteOrderByCode(nc.mairie.technique.Transaction aTransaction) throws Exception{
+public static java.util.ArrayList<Compte> listerCompteOrderByCode(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	Compte unCompte = new Compte();
 	return unCompte.getMyCompteBroker().listerCompteOrderByCode(aTransaction);
 }
-public static java.util.ArrayList listerComptesfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception{
+public static java.util.ArrayList<Compte> listerComptesfromGroupe(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception{
 	Compte unCompte = new Compte();
 	return unCompte.getMyCompteBroker().listerComptesfromGroupe(aTransaction, groupe);
 }
-public static java.util.ArrayList listerComptesfromGroupeOrderByCode(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception{
+public static java.util.ArrayList<Compte> listerComptesfromGroupeOrderByCode(nc.mairie.technique.Transaction aTransaction, String groupe) throws Exception{
 	Compte unCompte = new Compte();
 	return unCompte.getMyCompteBroker().listerComptesfromGroupeOrderByCode(aTransaction, groupe);
 }
@@ -140,12 +140,12 @@ public static Compte chercherCompte(final Transaction aTransaction, final String
 	return unCompte.getMyCompteBroker().chercherCompte(aTransaction, sCompte);
 }
 
-public static java.util.ArrayList listerCompteLikeCompte(nc.mairie.technique.Transaction aTransaction, String sCompte) throws Exception{
+public static java.util.ArrayList<Compte> listerCompteLikeCompte(nc.mairie.technique.Transaction aTransaction, String sCompte) throws Exception{
 	Compte unCompte = new Compte();
 	return unCompte.getMyCompteBroker().listerCompteLikeCompte(aTransaction, sCompte);
 }
 
-public static java.util.ArrayList listerCompteLikeNom(nc.mairie.technique.Transaction aTransaction, String sNom) throws Exception{
+public static java.util.ArrayList<Compte> listerCompteLikeNom(nc.mairie.technique.Transaction aTransaction, String sNom) throws Exception{
 	Compte unCompte = new Compte();
 	return unCompte.getMyCompteBroker().listerCompteLikeNom(aTransaction, sNom);
 }

@@ -17,6 +17,11 @@ import nc.mairie.technique.BasicProcess;
 
 public class DroitsApplisRobot extends Robot {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6432334313878909231L;
+
 	@Override
 	public BasicProcess getDefaultProcess() throws Exception {
 		return new DroitsApplis();
@@ -37,8 +42,8 @@ public class DroitsApplisRobot extends Robot {
 	}
 
 	@Override
-	protected Hashtable initialiseNavigation() {
-		java.util.Hashtable navigation = new java.util.Hashtable();
+	protected Hashtable<String, String> initialiseNavigation() {
+		java.util.Hashtable<String, String> navigation = new java.util.Hashtable<String, String>();
 		
 		//Gestion Comptes
 		navigation.put(GestionComptes.class.getName() + GestionComptes.STATUT_EDITCOMPTE, GestionCompteAvance.class.getName());

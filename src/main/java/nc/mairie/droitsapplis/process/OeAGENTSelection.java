@@ -10,11 +10,15 @@ import nc.mairie.droitsapplis.metier.Compte;
  * @author : Générateur de process
 */
 public class OeAGENTSelection extends nc.mairie.technique.BasicProcess {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7190310296680234950L;
 	public static final int STATUT_EDITCOMPTE=1;
 	public static final int STATUT_LISTES_COMPTES=2;
 	
 	private java.lang.String[] LB_AGENT;
-	private java.util.ArrayList listeCompte;
+	private java.util.ArrayList<Compte> listeCompte;
 	public String focus = null;
 	private boolean first = true;
 	private Compte theCompte;
@@ -42,9 +46,9 @@ private String [] getLB_AGENT() {
  *  Date de création : (01/01/2003 09:51:40)
  * @return java.util.ArrayList
  */
-private java.util.ArrayList getListeCompte() {
+private java.util.ArrayList<Compte> getListeCompte() {
 	if (listeCompte==null){
-		listeCompte = new java.util.ArrayList();
+		listeCompte = new java.util.ArrayList<Compte>();
 	}
 	return listeCompte;
 }
@@ -185,7 +189,7 @@ public boolean performPB_OK(javax.servlet.http.HttpServletRequest request) throw
 	}
 
 	//VariableGlobale.ajouter(request, VariableGlobale.GLOBAL_AGENT_MAIRIE, getListeAgent().get(indice));
-	VariableActivite.ajouter(this, GestionComptes.COMPTE_NOM, ((Compte)getListeCompte().get(indice)).getCdidut());
+	VariableActivite.ajouter(this, GestionComptes.COMPTE_NOM, getListeCompte().get(indice).getCdidut());
 	VariableActivite.ajouter(this, GestionComptes.ACTION_COMPTE, GestionComptes.AJOUTER_COMPTE);
 	setStatut(STATUT_EDITCOMPTE);
 	return true;
@@ -256,6 +260,7 @@ public boolean performPB_RECHERCHER(javax.servlet.http.HttpServletRequest reques
 private void setCompteEnCours(nc.mairie.droitsapplis.metier.Compte newCompte) {
 	theCompte = newCompte;
 }
+@SuppressWarnings("unused")
 private Compte getCompteEnCours() {
 	return theCompte;
 }
@@ -273,7 +278,7 @@ private void setLB_AGENT(java.lang.String[] newLB_AGENT) {
  *  Date de création : (01/01/2003 09:51:40)
  * @param newListeAgent java.util.ArrayList
  */
-private void setListeCompte(java.util.ArrayList newListeCompte) {
+private void setListeCompte(java.util.ArrayList<Compte> newListeCompte) {
 	listeCompte = newListeCompte;
 }
 /**
@@ -455,7 +460,7 @@ public boolean performPB_TRI(javax.servlet.http.HttpServletRequest request) thro
 	String [] attr = {"cdidut","liidut"};
 	String [] colonnes = {tri};
 	boolean []ordres = {true};
-	ArrayList a = Services.trier(getListeCompte(),colonnes,ordres);
+	ArrayList<Compte> a = Services.trier(getListeCompte(),colonnes,ordres);
 	FormateListe aFormateListe = new FormateListe(tailles, a, attr);
 	setLB_AGENT(aFormateListe.getListeFormatee());
 	return true;

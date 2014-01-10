@@ -14,6 +14,10 @@ import nc.mairie.technique.VariableActivite;
  * @author : Générateur de process
 */
 public class GestionDroitAvance extends nc.mairie.technique.BasicProcess {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1681404872573609214L;
 	private java.lang.String[] LB_APPLICATION;
 	private java.lang.String[] LB_GROUPES_DROITE;
 	private java.lang.String[] LB_GROUPES_GAUCHE;

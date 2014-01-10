@@ -6,6 +6,11 @@ import nc.mairie.technique.BasicProcess;
 
 public class DroitsApplis extends BasicProcess {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3020681054031147656L;
+
 	@Override
 	public String getJSP() {
 		return "DroitsApplis.jsp";
