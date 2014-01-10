@@ -220,12 +220,12 @@ included, depending on the components used on the page.Default is false.</descri
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>Accueil.jsp</welcome-file>
-		<welcome-file>DroitsApplis.jsp</welcome-file>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
+<!-- 		<welcome-file>DroitsApplis.jsp</welcome-file> -->
+<!-- 		<welcome-file>index.html</welcome-file> -->
+<!-- 		<welcome-file>index.htm</welcome-file> -->
+<!-- 		<welcome-file>index.jsp</welcome-file> -->
+<!-- 		<welcome-file>default.html</welcome-file> -->
+<!-- 		<welcome-file>default.htm</welcome-file> -->
+<!-- 		<welcome-file>default.jsp</welcome-file> -->
 	</welcome-file-list>
 </web-app>
