@@ -67,7 +67,6 @@ public class DroitsApplisRobot extends Robot {
 
 	@Override
 	protected Testeur initialiseTesteur() {
-		// TODO Raccord de méthode auto-généré
 		return null;
 	}
 

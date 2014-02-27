@@ -20,7 +20,7 @@ HoverRow = function() {
 	
   // Find the table that uses the "scrollTable" classname
   var allTableTags=document.getElementsByTagName("table"); 
-  for (i=0; i<allTableTags.length; i++) { 
+  for (var i=0; i<allTableTags.length; i++) { 
    // If this table uses the "scrollTable" class then get a reference to its body and first row
    if (allTableTags[i].className=="scrollTable") { 
     table_body = allTableTags[i].getElementsByTagName("tbody");
@@ -35,14 +35,14 @@ HoverRow = function() {
   for (var i=0; i<table_rows.length; i++) {
    // ignore rows with the title and total class assigned to them
    if (table_rows[i].className != "title" && table_rows[i].className != "total") {
-    table_rows[i].onmouseover=function() {this.className += " hoverMe";}
-    table_rows[i].onmouseout=function() {this.className=this.className.replace(new RegExp(" hoverMe\\b"), "");}
+    table_rows[i].onmouseover=function() {this.className += " hoverMe";};
+    table_rows[i].onmouseout=function() {this.className=this.className.replace(new RegExp(" hoverMe\\b"), "");};
    }
   } // End of for loop
   
  } // End of "If an IE browser"
 
-}
+};
 // If this browser suports attaching events (IE) then make the HoverRow function run on page load
 // Hote: HoverRow has to be re-run each time the table gets sorted
 if (window.attachEvent) window.attachEvent("onload", HoverRow);

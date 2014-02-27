@@ -219,7 +219,6 @@ Calendar.showMonthsCombo = function () {
 	if (!cal) {
 		return false;
 	}
-	var cal = cal;
 	var cd = cal.activeDiv;
 	var mc = cal.monthsCombo;
 	if (cal.hilitedMonth) {
@@ -241,7 +240,6 @@ Calendar.showYearsCombo = function (fwd) {
 	if (!cal) {
 		return false;
 	}
-	var cal = cal;
 	var cd = cal.activeDiv;
 	var yc = cal.yearsCombo;
 	if (cal.hilitedYear) {
@@ -605,7 +603,6 @@ Calendar.prototype.create = function (_par) {
 			cell.appendChild(document.createTextNode(text));
 		}
 		else {
-//			 FIXME: dirty hack for entities
 			cell.innerHTML = text;
 		}
 		return cell;
@@ -720,7 +717,7 @@ Calendar.prototype._init = function (mondayFirst, date) {
 	var no_days = date.getMonthDays();
 	date.setDate(1);
 	var wday = date.getDay();
-	var MON = mondayFirst ? 1 : 0;
+	//var MON = mondayFirst ? 1 : 0;
 	var SAT = mondayFirst ? 5 : 6;
 	var SUN = mondayFirst ? 6 : 0;
 	if (mondayFirst) {
@@ -728,7 +725,7 @@ Calendar.prototype._init = function (mondayFirst, date) {
 	}
 	var iday = 1;
 	var row = this.tbody.firstChild;
-	var MN = Calendar._MN3[month];
+	//var MN = Calendar._MN3[month];
 	var hasToday = ((today.getFullYear() == year) && (today.getMonth() == month));
 	var todayDate = today.getDate();
 	for (var i = 0; i < 6; ++i) {
@@ -1177,7 +1174,7 @@ var calendar = null;//  remember the calendar object so that we reuse it and
 var oldLink = null;
 // code to change the active stylesheet
 function setActiveStyleSheet(link, title) {
-  var i, a, main;
+  var i, a;
   for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
     if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
       a.disabled = true;
@@ -1218,7 +1215,6 @@ function closeHandler(cal) {
 function checkCalendar(ev) {
   var el = Calendar.is_ie ? Calendar.getElement(ev) : Calendar.getTargetElement(ev);
   for (; el != null; el = el.parentNode)
-//     FIXME: allow end-user to click some link without closing the
 //     calendar.  Good to see real-time stylesheet change :)
     if (el == calendar.element || el.tagName == "A") break;
   if (el == null) {

@@ -1,7 +1,6 @@
 /*
  * Created on 6 févr. 2009
  *
- * TODO To change the template for this generated file go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
 package nc.mairie.metier;
@@ -19,7 +18,6 @@ import nc.mairie.droitsapplis.metier.Groupe;
  * @author fonol77
  * Méthodes génériques utilitaires
  * 
- * TODO To change the template for this generated type comment go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
 public class Utils {

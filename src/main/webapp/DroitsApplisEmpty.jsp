@@ -2,7 +2,7 @@
 <%@page import="nc.mairie.servlets.Frontale"%>
 <%@page contentType="text/html;charset=UTF-8"%>
 <BR><BR>
-<TABLE width="100%">
+<TABLE style="width: 100%">
 <TR><TD class="sigp2-majuscule-titre" style="text-align : center; vertical-align : middle;">
 Vous n'avez pas les droits nécessaire pour accéder à l'application de gestion des droits.
 <BR>Veuillez contacter la DSI.

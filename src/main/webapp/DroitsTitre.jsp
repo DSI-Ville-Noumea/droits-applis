@@ -56,8 +56,7 @@ function changerTitre(chaine) {
 </script>
 </HEAD>
 <!-- background="images/fond_menu.jpg" -->
-<BODY bgcolor="#ffffff" text="#000000" style="text-align : center;"><BASEFONT FACE="Arial" SIZE=2
-onload='changerTitre(window.parent.frames("Titre").defaultTitre);'>
+<BODY bgcolor="#ffffff" text="#000000" style="text-align : center;" onLoad='changerTitre(window.parent.frames("Titre").defaultTitre);'><BASEFONT FACE="Arial" SIZE=2>
 <table width="100%"><tr><td valign="top" align="left">
 <IMG src="images/DSI03.gif" width="139" height="87" border="0" align="left">
 </td><td valign="middle" align="center">

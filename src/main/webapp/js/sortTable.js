@@ -77,7 +77,7 @@ function sortTable(td_element,ignoreFirstLines,ignoreLastLines) {
  // (element 2 or sortImages array) except for the current column (all ready been changed)
  var allImg = tr_elements[0].getElementsByTagName('img');
   for(var i=0;i<allImg.length;i++){
-  if(allImg[i]!=sortColImage){allImg[i].setAttribute('src',sortImages[2])}
+  if(allImg[i]!=sortColImage){allImg[i].setAttribute('src',sortImages[2]);};
  }
   
  // Some explantion of the basic concept of the following code before we
@@ -87,7 +87,7 @@ function sortTable(td_element,ignoreFirstLines,ignoreLastLines) {
  // We are never really sorting more than a columns worth of data, which should keep the sorting fast.
  
  // Create a new array for holding row information
- var clonedRows = new Array() 
+ var clonedRows = new Array() ;
 
  // Create a new array to store just the selected column values, not the whole row
  var originalCol = new Array();
@@ -256,8 +256,10 @@ function FormatForType(itm) {
      sortValue = parseFloat(sortValue);
    }
   }
+  
+  var res= sortValue;
 
-  return sortValue;
+  return res;
 }
 
 
