@@ -7,6 +7,7 @@ import nc.mairie.technique.BasicRecord;
 public class GroupeBroker extends nc.mairie.technique.BasicBroker {
 /**
  * Constructeur GroupeBroker.
+ * @param aMetier aMetier
  */
 public GroupeBroker(nc.mairie.technique.BasicMetier aMetier) {
 	super(aMetier);
@@ -43,12 +44,22 @@ protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws 
  * Methode creerObjetMetierBroker qui retourne
  * true ou false
  */
+/**
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception Exception
+ */
 public boolean creerGroupe(nc.mairie.technique.Transaction aTransaction)  throws Exception{
 	return creer(aTransaction);
 }
 /**
  * Methode modifierObjetMetierBroker qui retourne
  * true ou false
+ */
+/**
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws java.lang.Exception java.lang.Exception
  */
 public boolean modifierGroupe(nc.mairie.technique.Transaction aTransaction) throws java.lang.Exception {
 	return modifier(aTransaction);
@@ -57,26 +68,39 @@ public boolean modifierGroupe(nc.mairie.technique.Transaction aTransaction) thro
  * Methode supprimerObjetMetierBroker qui retourne
  * true ou false
  */
+/**
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws java.lang.Exception java.lang.Exception
+ */
 public boolean supprimerGroupe(nc.mairie.technique.Transaction aTransaction) throws java.lang.Exception {
 	return supprimer(aTransaction);
 }
 /**
  * Retourne un ArrayList d'objet métier : Groupe.
+ * @param aTransaction aTransaction
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public java.util.ArrayList<Groupe> listerGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" order by LIGROU");
 }
 /**
  * Retourne un Groupe.
+ * @param aTransaction aTransaction
+ * @param groupid groupid
  * @return Groupe
+ * @throws Exception  Exception 
  */
 public Groupe chercherGroupe(nc.mairie.technique.Transaction aTransaction, String groupid) throws Exception {
 	return (Groupe)executeSelect(aTransaction,"select * from "+getTable()+" where CDGROU = "+groupid+"");
 }
 /**
  * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * @param aTransaction aTransaction
+ * @param compte compte
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public java.util.ArrayList<Groupe> listerGroupefromCompte(nc.mairie.technique.Transaction aTransaction, String compte) throws Exception {
 	//select * from MAIRIE.SIGROU where MAIRIE.SIGROU.CDGROU in (SELECT  MAIRIE.SIGRUT.CDGROU from MAIRIE.SIGRUT where CDIDUT='FONOL77');
@@ -84,12 +108,11 @@ public java.util.ArrayList<Groupe> listerGroupefromCompte(nc.mairie.technique.Tr
 }
 /**
  * 
- * @param aTransaction
- * @param compte
- * @param appli
- * @return
- * @throws Exception
- * @comment not tested yet!!!!!!!!!!!!!
+ * @param aTransaction aTransaction
+ * @param compte compte
+ * @param appli appli
+ * @return boolean
+ * @throws Exception Exception
  */
 public java.util.ArrayList<Groupe> listerGroupefromCompteAndAppli(nc.mairie.technique.Transaction aTransaction, String compte, String appli) throws Exception {
 	//select * from MAIRIE.SIGROU where MAIRIE.SIGROU.CDGROU in (SELECT  MAIRIE.SIGRUT.CDGROU from MAIRIE.SIGRUT where CDIDUT='FONOL77');
@@ -98,7 +121,10 @@ public java.util.ArrayList<Groupe> listerGroupefromCompteAndAppli(nc.mairie.tech
 
 /**
  * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * @param aTransaction aTransaction
+ * @param droit droit
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public java.util.ArrayList<Groupe> listerGroupefromDroit(nc.mairie.technique.Transaction aTransaction, String droit) throws Exception {
 	//select * from MAIRIE.SIGROU where MAIRIE.SIGROU.CDGROU in (SELECT  MAIRIE.SIGRUT.CDGROU from MAIRIE.SIGRUT where CDIDUT='FONOL77');

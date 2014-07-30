@@ -108,7 +108,9 @@ public final String toString() {
 
 /**
  * Retourne un ArrayList d'objet métier : Compte.
+ * @param aTransaction aTransaction
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public static java.util.ArrayList<Compte> listerCompte(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	Compte unCompte = new Compte();
@@ -133,7 +135,7 @@ public static java.util.ArrayList<Compte> listerComptesfromGroupeOrderByCode(nc.
  * @param aTransaction la transaction en cours
  * @param sCompte le nom du compte
  * @return le Compte demandé
- * @throws Exception 
+ * @throws Exception  Exception 
  */
 public static Compte chercherCompte(final Transaction aTransaction, final String sCompte) throws Exception {
 	Compte unCompte = new Compte();
@@ -156,7 +158,7 @@ public static java.util.ArrayList<Compte> listerCompteLikeNom(nc.mairie.techniqu
  * 
  * @param aTransaction la transaction en cours
  * @return vrai ou faux si le compte n'est pas créé
- * @throws Exception 
+ * @throws Exception  Exception 
  */
 public final boolean creerCompte(final Transaction aTransaction)  throws Exception {
 	//Creation du Compte
@@ -169,7 +171,7 @@ public final boolean creerCompte(final Transaction aTransaction)  throws Excepti
  * 
  * @param aTransaction la transaction en cours
  * @return vrai ou faux si le compte n'est pas modifié
- * @throws Exception 
+ * @throws Exception  Exception 
  */
 public final boolean modifierCompte(final Transaction aTransaction) throws Exception {
 	//Modification du Compte
@@ -182,7 +184,7 @@ public final boolean modifierCompte(final Transaction aTransaction) throws Excep
  * 
  * @param aTransaction la transaction en cours
  * @return vrai ou faux si l'objet n'est pas supprimé
- * @throws Exception 
+ * @throws Exception  Exception 
  */
 public final boolean supprimerCompte(final Transaction aTransaction) throws Exception{
 	//Suppression de l'Compte

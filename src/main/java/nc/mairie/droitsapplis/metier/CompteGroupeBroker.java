@@ -8,6 +8,9 @@ public class CompteGroupeBroker extends nc.mairie.technique.BasicBroker {
 /**
  * Constructeur CompteGroupeBroker.
  */
+/**
+ * @param aMetier aMetier
+ */
 public CompteGroupeBroker(nc.mairie.technique.BasicMetier aMetier) {
 	super(aMetier);
 }
@@ -42,12 +45,22 @@ protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws 
  * Methode creerObjetMetierBroker qui retourne
  * true ou false
  */
+/**
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception Exception
+ */
 public boolean creerCompteGroupe(nc.mairie.technique.Transaction aTransaction)  throws Exception{
 	return creer(aTransaction);
 }
 /**
  * Methode modifierObjetMetierBroker qui retourne
  * true ou false
+ */
+/**
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws java.lang.Exception java.lang.Exception
  */
 public boolean modifierCompteGroupe(nc.mairie.technique.Transaction aTransaction) throws java.lang.Exception {
 	return modifier(aTransaction);
@@ -56,6 +69,11 @@ public boolean modifierCompteGroupe(nc.mairie.technique.Transaction aTransaction
  * Methode supprimerObjetMetierBroker qui retourne
  * true ou false
  */
+/**
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws java.lang.Exception java.lang.Exception
+ */
 public boolean supprimerCompteGroupe(nc.mairie.technique.Transaction aTransaction) throws java.lang.Exception {
 	return supprimer(aTransaction);
 }
@@ -63,12 +81,23 @@ public boolean supprimerCompteGroupe(nc.mairie.technique.Transaction aTransactio
  * Retourne un ArrayList d'objet métier : CompteGroupe.
  * @return java.util.ArrayList
  */
+/**
+ * @param aTransaction aTransaction
+ * @return ArrayList
+ * @throws Exception Exception
+ */
 public java.util.ArrayList<CompteGroupe> listerCompteGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+"");
 }
 /**
  * Retourne un ArrayList d'objet métier : CompteGroupe.
  * @return java.util.ArrayList
+ */
+/**
+ * @param aTransaction aTransaction
+ * @param sCompte sCompte
+ * @return ArrayList
+ * @throws Exception Exception
  */
 public java.util.ArrayList<CompteGroupe> listerCompteGroupe(nc.mairie.technique.Transaction aTransaction, String sCompte) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" WHERE CDIDUT='"+sCompte+"'");
@@ -81,12 +110,25 @@ public java.util.ArrayList<CompteGroupe> listerCompteGroupefromGroupe(nc.mairie.
  * Retourne un CompteGroupe.
  * @return CompteGroupe
  */
+/**
+ * @param aTransaction aTransaction
+ * @param cle cle
+ * @return CompteGroupe
+ * @throws Exception Exception
+ */
 public CompteGroupe chercherCompteGroupe(nc.mairie.technique.Transaction aTransaction, String cle) throws Exception {
 	return (CompteGroupe)executeSelect(aTransaction,"select * from "+getTable()+" where CODE = "+cle+"");
 }
 /**
  * Retourne un CompteGroupe.
  * @return CompteGroupe
+ */
+/**
+ * @param aTransaction aTransaction
+ * @param sCompte sCompte
+ * @param cdGrou cdGrou
+ * @return CompteGroupe
+ * @throws Exception Exception
  */
 public CompteGroupe chercherCompteGroupe(nc.mairie.technique.Transaction aTransaction, String sCompte, String cdGrou) throws Exception {
 	return (CompteGroupe)executeSelect(aTransaction,"select * from "+getTable()+" where CDIDUT = '"+sCompte+"' and CDGROU= '"+cdGrou+"'");

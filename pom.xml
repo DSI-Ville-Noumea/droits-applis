@@ -175,13 +175,13 @@
 						<phase>package</phase>
 						<configuration>
 							<tasks>
-								<copy file="${project.build.directory}/${project.build.finalName}.${project.packaging}" tofile="src/site/resources/war/${project.version}/${project.artifactId}##${project.version}.${project.packaging}">
+								<copy file="${project.build.directory}/${project.build.finalName}.${project.packaging}" tofile="src/site/resources/${project.packaging}/${project.version}/${project.artifactId}##${project.version}.${project.packaging}">
 								</copy>
 								<copy file="${project.build.directory}/${project.build.finalName}.${project.packaging}" tofile="${project.build.directory}/${project.artifactId}##${project.version}.${project.packaging}">
 								</copy>
 								<delete file="${project.build.directory}/${project.build.finalName}.${project.packaging}"/>
 								<checksum algorithm="md5">
-									<fileset dir="src/site/resources/war/${project.version}">
+									<fileset dir="src/site/resources/${project.packaging}/${project.version}">
 										<include name="*.war"/>
 										<include name="*.jar"/>
 									</fileset>
@@ -251,11 +251,12 @@
 							<artifactId>maven-changelog-plugin</artifactId>
 							<version>2.2</version>
 						</plugin>
-						<plugin>
-							<groupId>org.codehaus.mojo</groupId>
-							<artifactId>findbugs-maven-plugin</artifactId>
-							<version>2.4.0</version>
-						</plugin>
+<!-- 						findbugs ne marche pas avec java 1.8 -->
+<!-- 						<plugin> -->
+<!-- 							<groupId>org.codehaus.mojo</groupId> -->
+<!-- 							<artifactId>findbugs-maven-plugin</artifactId> -->
+<!-- 							<version>2.4.0</version> -->
+<!-- 						</plugin> -->
 					</reportPlugins>
 				</configuration>
 			</plugin>

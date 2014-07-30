@@ -7,6 +7,7 @@ import nc.mairie.technique.BasicRecord;
 public class GroupeDroitsBroker extends nc.mairie.technique.BasicBroker {
 /**
  * Constructeur GroupeDroitsBroker.
+ * @param aMetier aMetier
  */
 public GroupeDroitsBroker(nc.mairie.technique.BasicMetier aMetier) {
 	super(aMetier);
@@ -41,6 +42,9 @@ protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws 
 /**
  * Methode creerObjetMetierBroker qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception  Exception 
  */
 public boolean creerGroupeDroits(nc.mairie.technique.Transaction aTransaction)  throws Exception{
 	return creer(aTransaction);
@@ -48,6 +52,9 @@ public boolean creerGroupeDroits(nc.mairie.technique.Transaction aTransaction)  
 /**
  * Methode modifierObjetMetierBroker qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws java.lang.Exception  java.lang.Exception 
  */
 public boolean modifierGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws java.lang.Exception {
 	return modifier(aTransaction);
@@ -55,13 +62,18 @@ public boolean modifierGroupeDroits(nc.mairie.technique.Transaction aTransaction
 /**
  * Methode supprimerObjetMetierBroker qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws java.lang.Exception  java.lang.Exception 
  */
 public boolean supprimerGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws java.lang.Exception {
 	return supprimer(aTransaction);
 }
 /**
  * Retourne un ArrayList d'objet métier : GroupeDroits.
+ * @param aTransaction aTransaction
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public java.util.ArrayList<GroupeDroits> listerGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+"");
@@ -75,7 +87,10 @@ public java.util.ArrayList<GroupeDroits> listerGroupeDroitsfromGroupe(nc.mairie.
 }
 /**
  * Retourne un GroupeDroits.
+ * @param aTransaction aTransaction
+ * @param cle cle
  * @return GroupeDroits
+ * @throws Exception  Exception 
  */
 public GroupeDroits chercherGroupeDroits(nc.mairie.technique.Transaction aTransaction, String cle) throws Exception {
 	return (GroupeDroits)executeSelect(aTransaction,"select * from "+getTable()+" where CODE = "+cle+"");

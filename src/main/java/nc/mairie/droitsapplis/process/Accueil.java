@@ -64,6 +64,7 @@ public String getJSP() {
  * PB_CONNEXION
  * Date de création : (13/05/09 12:35:45)
  * @author : Générateur de process
+ * @return String
  */
 public java.lang.String getNOM_PB_CONNEXION() {
 	return "NOM_PB_CONNEXION";
@@ -75,6 +76,9 @@ public java.lang.String getNOM_PB_CONNEXION() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (13/05/09 12:35:45)
  * @author : Générateur de process
+ * @param request request
+ * @return boolean
+ * @throws Exception  Exception 
  */
 public boolean performPB_CONNEXION(javax.servlet.http.HttpServletRequest request) throws Exception {
 	return true;

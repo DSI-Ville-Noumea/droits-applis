@@ -139,6 +139,9 @@ public String getJSP() {
  * Date de création : (23/04/09 10:40:08)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_AJOUTER() {
 	return "NOM_PB_AJOUTER";
 }
@@ -149,6 +152,11 @@ public java.lang.String getNOM_PB_AJOUTER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (23/04/09 10:40:08)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_AJOUTER(javax.servlet.http.HttpServletRequest request) throws Exception {
 
@@ -163,6 +171,9 @@ public boolean performPB_AJOUTER(javax.servlet.http.HttpServletRequest request) 
  * Date de création : (23/04/09 10:40:08)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_ANNULER() {
 	return "NOM_PB_ANNULER";
 }
@@ -174,6 +185,11 @@ public java.lang.String getNOM_PB_ANNULER() {
  * Date de création : (23/04/09 10:40:08)
  * @author : Générateur de process
  */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
+ */
 public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	setStatut(STATUT_RETOUR);
 	return true;
@@ -183,6 +199,9 @@ public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) 
  * PB_MODIFIER
  * Date de création : (23/04/09 10:40:08)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getNOM_PB_MODIFIER() {
 	return "NOM_PB_MODIFIER";
@@ -194,6 +213,11 @@ public java.lang.String getNOM_PB_MODIFIER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (23/04/09 10:40:08)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_MODIFIER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	
@@ -213,6 +237,9 @@ public boolean performPB_MODIFIER(javax.servlet.http.HttpServletRequest request)
  * Date de création : (23/04/09 10:40:08)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_SUPPRIMER() {
 	return "NOM_PB_SUPPRIMER";
 }
@@ -223,6 +250,11 @@ public java.lang.String getNOM_PB_SUPPRIMER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (23/04/09 10:40:08)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_SUPPRIMER(javax.servlet.http.HttpServletRequest request) throws Exception {
 
@@ -240,6 +272,9 @@ public boolean performPB_SUPPRIMER(javax.servlet.http.HttpServletRequest request
  * RB_COMPTES
  * Date de création : (23/04/09 10:40:08)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getNOM_RB_COMPTES() {
 	return "NOM_RB_COMPTES";
@@ -263,9 +298,9 @@ public boolean ControleRadioBoxComptes(){
 /**
  * 
  * Affichage du tableau qui liste les comptes des utilisateurs
- * @return
- * @throws Exception
- * @throws NumberFormatException
+ * @return String
+ * @throws Exception Exception
+ * @throws NumberFormatException NumberFormatException
  */
 public String generateTABLO_COMPTES() throws Exception, NumberFormatException{
 /*

@@ -16,11 +16,17 @@ public Groupe() {
 /**
  * Getter de l'attribut ligrou.
  */
+/**
+ * @return String
+ */
 public String getLigrou() {
 	return ligrou;
 }
 /**
  * Setter de l'attribut ligrou.
+ */
+/**
+ * @param newLigrou newLigrou
  */
 public void setLigrou(String newLigrou) { 
 	ligrou = newLigrou;
@@ -28,11 +34,17 @@ public void setLigrou(String newLigrou) {
 /**
  * Getter de l'attribut cdgrou.
  */
+/**
+ * @return String
+ */
 public String getCdgrou() {
 	return cdgrou;
 }
 /**
  * Setter de l'attribut cdgrou.
+ */
+/**
+ * @param newCdgrou newCdgrou
  */
 public void setCdgrou(String newCdgrou) { 
 	cdgrou = newCdgrou;
@@ -40,11 +52,17 @@ public void setCdgrou(String newCdgrou) {
 /**
  * Getter de l'attribut definition.
  */
+/**
+ * @return String
+ */
 public String getDefinition() {
 	return definition;
 }
 /**
  * Setter de l'attribut definition.
+ */
+/**
+ * @param newDefinition newDefinition
  */
 public void setDefinition(String newDefinition) { 
 	definition = newDefinition;
@@ -58,6 +76,9 @@ protected nc.mairie.technique.BasicBroker definirMyBroker() {
 /**
  Methode à définir dans chaque objet Métier pour instancier un Broker 
 */
+/**
+ * @return GroupeBroker
+ */
 protected GroupeBroker getMyGroupeBroker() {
 	return (GroupeBroker)getMyBasicBroker();
 }
@@ -74,6 +95,11 @@ public String toString() {
  * Retourne un ArrayList d'objet métier : Groupe.
  * @return java.util.ArrayList
  */
+/**
+ * @param aTransaction aTransaction
+ * @return ArrayList
+ * @throws Exception Exception
+ */
 public static java.util.ArrayList<Groupe> listerGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	Groupe unGroupe = new Groupe();
 	return unGroupe.getMyGroupeBroker().listerGroupe(aTransaction);
@@ -82,6 +108,12 @@ public static java.util.ArrayList<Groupe> listerGroupe(nc.mairie.technique.Trans
  * Retourne un Groupe.
  * @return Groupe
  */
+/**
+ * @param aTransaction aTransaction
+ * @param groupid groupid
+ * @return Groupe
+ * @throws Exception Exception
+ */
 public static Groupe chercherGroupe(nc.mairie.technique.Transaction aTransaction, String groupid) throws Exception{
 	Groupe unGroupe = new Groupe();
 	return unGroupe.getMyGroupeBroker().chercherGroupe(aTransaction, groupid);
@@ -89,6 +121,11 @@ public static Groupe chercherGroupe(nc.mairie.technique.Transaction aTransaction
 /**
  * Methode creerObjetMetier qui retourne
  * true ou false
+ */
+/**
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean creerGroupe(nc.mairie.technique.Transaction aTransaction )  throws Exception {
 	
@@ -104,6 +141,11 @@ public boolean creerGroupe(nc.mairie.technique.Transaction aTransaction )  throw
  * Methode modifierObjetMetier qui retourne
  * true ou false
  */
+/**
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception Exception
+ */
 public boolean modifierGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	//Modification du Groupe
 	return getMyGroupeBroker().modifierGroupe(aTransaction);
@@ -111,6 +153,11 @@ public boolean modifierGroupe(nc.mairie.technique.Transaction aTransaction) thro
 /**
  * Methode supprimerObjetMetier qui retourne
  * true ou false
+ */
+/**
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean supprimerGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	//Suppression de l'Groupe

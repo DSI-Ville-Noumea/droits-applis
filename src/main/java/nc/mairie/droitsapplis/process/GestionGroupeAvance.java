@@ -211,6 +211,9 @@ public String getJSP() {
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_ANNULER() {
 	return "NOM_PB_ANNULER";
 }
@@ -222,6 +225,11 @@ public java.lang.String getNOM_PB_ANNULER() {
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
  */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
+ */
 public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	setStatut(STATUT_PROCESS_APPELANT);
 	return true;
@@ -231,6 +239,9 @@ public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) 
  * PB_VALIDER
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getNOM_PB_VALIDER() {
 	return "NOM_PB_VALIDER";
@@ -242,6 +253,11 @@ public java.lang.String getNOM_PB_VALIDER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_VALIDER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	GroupeDroits gd;
@@ -373,6 +389,9 @@ public boolean performPB_VALIDER(javax.servlet.http.HttpServletRequest request) 
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_ST_DESCRIPTION() {
 	return "NOM_ST_DESCRIPTION";
 }
@@ -381,6 +400,9 @@ public java.lang.String getNOM_ST_DESCRIPTION() {
  * ST_DESCRIPTION
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getVAL_ST_DESCRIPTION() {
 	return getZone(getNOM_ST_DESCRIPTION());
@@ -391,6 +413,9 @@ public java.lang.String getVAL_ST_DESCRIPTION() {
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_ST_NOM() {
 	return "NOM_ST_NOM";
 }
@@ -399,6 +424,9 @@ public java.lang.String getNOM_ST_NOM() {
  * ST_NOM
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getVAL_ST_NOM() {
 	return getZone(getNOM_ST_NOM());
@@ -409,6 +437,9 @@ public java.lang.String getVAL_ST_NOM() {
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_EF_DESCRIPTION() {
 	return "NOM_EF_DESCRIPTION";
 }
@@ -417,6 +448,9 @@ public java.lang.String getNOM_EF_DESCRIPTION() {
  * EF_DESCRIPTION
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getVAL_EF_DESCRIPTION() {
 	return getZone(getNOM_EF_DESCRIPTION());
@@ -427,6 +461,9 @@ public java.lang.String getVAL_EF_DESCRIPTION() {
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_EF_NOM() {
 	return "NOM_EF_NOM";
 }
@@ -435,6 +472,9 @@ public java.lang.String getNOM_EF_NOM() {
  * EF_NOM
  * Date de création : (07/05/09 10:16:09)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getVAL_EF_NOM() {
 	return getZone(getNOM_EF_NOM());
@@ -464,6 +504,9 @@ public void setSGroupeIdCourant(String groupeIdCourant) {
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_AJOUTER_DROIT() {
 	return "NOM_PB_AJOUTER_DROIT";
 }
@@ -474,6 +517,11 @@ public java.lang.String getNOM_PB_AJOUTER_DROIT() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_AJOUTER_DROIT(javax.servlet.http.HttpServletRequest request) throws Exception {
 	// on ajoute le groupe à la liste des groupes pour le compte
@@ -495,6 +543,9 @@ public boolean performPB_AJOUTER_DROIT(javax.servlet.http.HttpServletRequest req
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_AJOUTER_COMPTE() {
 	return "NOM_PB_AJOUTER_COMPTE";
 }
@@ -505,6 +556,11 @@ public java.lang.String getNOM_PB_AJOUTER_COMPTE() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_AJOUTER_COMPTE(javax.servlet.http.HttpServletRequest request) throws Exception {
 	// on ajoute le groupe à la liste des groupes pour le compte
@@ -526,6 +582,9 @@ public boolean performPB_AJOUTER_COMPTE(javax.servlet.http.HttpServletRequest re
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_SUPPRIMER_DROIT() {
 	return "NOM_PB_SUPPRIMER_DROIT";
 }
@@ -536,6 +595,11 @@ public java.lang.String getNOM_PB_SUPPRIMER_DROIT() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_SUPPRIMER_DROIT(javax.servlet.http.HttpServletRequest request) throws Exception {
 	
@@ -559,6 +623,9 @@ public boolean performPB_SUPPRIMER_DROIT(javax.servlet.http.HttpServletRequest r
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_SUPPRIMER_COMPTE() {
 	return "NOM_PB_SUPPRIMER_COMPTE";
 }
@@ -569,6 +636,11 @@ public java.lang.String getNOM_PB_SUPPRIMER_COMPTE() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_SUPPRIMER_COMPTE(javax.servlet.http.HttpServletRequest request) throws Exception {
 	
@@ -611,6 +683,9 @@ private void setLB_GROUPES_DROITE_DROIT(java.lang.String[] newLB_GROUPES_DROITE_
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_LB_GROUPES_DROITE_DROIT() {
 	return "NOM_LB_GROUPES_DROITE_DROIT";
 }
@@ -619,6 +694,9 @@ public java.lang.String getNOM_LB_GROUPES_DROITE_DROIT() {
  * NOM_LB_GROUPES_DROITE_SELECT
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getNOM_LB_GROUPES_DROITE_DROIT_SELECT() {
 	return "NOM_LB_GROUPES_DROITE_DROIT_SELECT";
@@ -630,6 +708,9 @@ public java.lang.String getNOM_LB_GROUPES_DROITE_DROIT_SELECT() {
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String [] getVAL_LB_GROUPES_DROITE_DROIT() {
 	return getLB_GROUPES_DROITE_DROIT();
 }
@@ -639,6 +720,9 @@ public java.lang.String [] getVAL_LB_GROUPES_DROITE_DROIT() {
  * LB_GROUPES_DROITE
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getVAL_LB_GROUPES_DROITE_DROIT_SELECT() {
 	return getZone(getNOM_LB_GROUPES_DROITE_DROIT_SELECT());
@@ -669,6 +753,9 @@ private void setLB_GROUPES_GAUCHE_DROIT(java.lang.String[] newLB_GROUPES_GAUCHE_
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_LB_GROUPES_GAUCHE_DROIT() {
 	return "NOM_LB_GROUPES_GAUCHE_DROIT";
 }
@@ -677,6 +764,9 @@ public java.lang.String getNOM_LB_GROUPES_GAUCHE_DROIT() {
  * NOM_LB_GROUPES_GAUCHE_SELECT
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getNOM_LB_GROUPES_GAUCHE_DROIT_SELECT() {
 	return "NOM_LB_GROUPES_GAUCHE_DROIT_SELECT";
@@ -688,6 +778,9 @@ public java.lang.String getNOM_LB_GROUPES_GAUCHE_DROIT_SELECT() {
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String [] getVAL_LB_GROUPES_GAUCHE_DROIT() {
 	return getLB_GROUPES_GAUCHE_DROIT();
 }
@@ -697,6 +790,9 @@ public java.lang.String [] getVAL_LB_GROUPES_GAUCHE_DROIT() {
  * LB_GROUPES_GAUCHE
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getVAL_LB_GROUPES_GAUCHE_DROIT_SELECT() {
 	return getZone(getNOM_LB_GROUPES_GAUCHE_DROIT_SELECT());
@@ -728,6 +824,9 @@ private void setLB_GROUPES_DROITE_COMPTE(java.lang.String[] newLB_GROUPES_DROITE
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_LB_GROUPES_DROITE_COMPTE() {
 	return "NOM_LB_GROUPES_DROITE_COMPTE";
 }
@@ -736,6 +835,9 @@ public java.lang.String getNOM_LB_GROUPES_DROITE_COMPTE() {
  * NOM_LB_GROUPES_DROITE_SELECT
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getNOM_LB_GROUPES_DROITE_COMPTE_SELECT() {
 	return "NOM_LB_GROUPES_DROITE_COMPTE_SELECT";
@@ -747,6 +849,9 @@ public java.lang.String getNOM_LB_GROUPES_DROITE_COMPTE_SELECT() {
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String [] getVAL_LB_GROUPES_DROITE_COMPTE() {
 	return getLB_GROUPES_DROITE_COMPTE();
 }
@@ -756,6 +861,9 @@ public java.lang.String [] getVAL_LB_GROUPES_DROITE_COMPTE() {
  * LB_GROUPES_DROITE
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getVAL_LB_GROUPES_DROITE_COMPTE_SELECT() {
 	return getZone(getNOM_LB_GROUPES_DROITE_COMPTE_SELECT());
@@ -786,6 +894,9 @@ private void setLB_GROUPES_GAUCHE_COMPTE(java.lang.String[] newLB_GROUPES_GAUCHE
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_LB_GROUPES_GAUCHE_COMPTE() {
 	return "NOM_LB_GROUPES_GAUCHE_COMPTE";
 }
@@ -794,6 +905,9 @@ public java.lang.String getNOM_LB_GROUPES_GAUCHE_COMPTE() {
  * NOM_LB_GROUPES_GAUCHE_SELECT
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getNOM_LB_GROUPES_GAUCHE_COMPTE_SELECT() {
 	return "NOM_LB_GROUPES_GAUCHE_COMPTE_SELECT";
@@ -805,6 +919,9 @@ public java.lang.String getNOM_LB_GROUPES_GAUCHE_COMPTE_SELECT() {
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String [] getVAL_LB_GROUPES_GAUCHE_COMPTE() {
 	return getLB_GROUPES_GAUCHE_COMPTE();
 }
@@ -814,6 +931,9 @@ public java.lang.String [] getVAL_LB_GROUPES_GAUCHE_COMPTE() {
  * LB_GROUPES_GAUCHE
  * Date de création : (27/04/09 16:06:40)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getVAL_LB_GROUPES_GAUCHE_COMPTE_SELECT() {
 	return getZone(getNOM_LB_GROUPES_GAUCHE_COMPTE_SELECT());

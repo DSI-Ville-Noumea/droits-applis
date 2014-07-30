@@ -102,6 +102,9 @@ public String getJSP() {
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_AJOUTER() {
 	return "NOM_PB_AJOUTER";
 }
@@ -112,6 +115,11 @@ public java.lang.String getNOM_PB_AJOUTER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_AJOUTER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	VariableActivite.ajouter(this, ACTION_GROUPE, AJOUTER_GROUPE);
@@ -124,6 +132,9 @@ public boolean performPB_AJOUTER(javax.servlet.http.HttpServletRequest request) 
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_ANNULER() {
 	return "NOM_PB_ANNULER";
 }
@@ -135,6 +146,11 @@ public java.lang.String getNOM_PB_ANNULER() {
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
  */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
+ */
 public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	setStatut(STATUT_RETOUR);
 	return true;
@@ -144,6 +160,9 @@ public boolean performPB_ANNULER(javax.servlet.http.HttpServletRequest request) 
  * PB_MODIFIER
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getNOM_PB_MODIFIER() {
 	return "NOM_PB_MODIFIER";
@@ -155,6 +174,11 @@ public java.lang.String getNOM_PB_MODIFIER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_MODIFIER(javax.servlet.http.HttpServletRequest request) throws Exception {
 	
@@ -174,6 +198,9 @@ public boolean performPB_MODIFIER(javax.servlet.http.HttpServletRequest request)
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_PB_SUPPRIMER() {
 	return "NOM_PB_SUPPRIMER";
 }
@@ -184,6 +211,11 @@ public java.lang.String getNOM_PB_SUPPRIMER() {
  *   setStatut(STATUT, boolean veutRetour) ou setStatut(STATUT,Message d'erreur)
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
+ */
+/**
+ * @param request request
+ * @return boolean
+ * @throws Exception Exception
  */
 public boolean performPB_SUPPRIMER(javax.servlet.http.HttpServletRequest request) throws Exception {
 
@@ -202,6 +234,9 @@ public boolean performPB_SUPPRIMER(javax.servlet.http.HttpServletRequest request
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getNOM_RG_GROUPES() {
 	return "NOM_RG_GROUPES";
 }
@@ -211,6 +246,9 @@ public java.lang.String getNOM_RG_GROUPES() {
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
  */
+/**
+ * @return String
+ */
 public java.lang.String getVAL_RG_GROUPES() {
 	return getZone(getNOM_RG_GROUPES());
 }
@@ -219,6 +257,9 @@ public java.lang.String getVAL_RG_GROUPES() {
  * RB_GROUPES
  * Date de création : (06/05/09 15:36:28)
  * @author : Générateur de process
+ */
+/**
+ * @return String
  */
 public java.lang.String getNOM_RB_GROUPES() {
 	return "NOM_RB_GROUPES";
@@ -243,9 +284,9 @@ public boolean ControleRadioBoxComptes(){
 /**
  * 
  * Affichage du tableau qui liste les droits des groupes
- * @return
- * @throws Exception
- * @throws NumberFormatException
+ * @return String
+ * @throws Exception Exception
+ * @throws NumberFormatException NumberFormatException
  */
 public String generateTABLO_GROUPES() throws Exception, NumberFormatException{
 	/*

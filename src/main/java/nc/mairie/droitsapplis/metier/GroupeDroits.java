@@ -14,24 +14,28 @@ public GroupeDroits() {
 }
 /**
  * Getter de l'attribut cdgrou.
+ * @return String
  */
 public String getCdgrou() {
 	return cdgrou;
 }
 /**
  * Setter de l'attribut cdgrou.
+ * @param newCdgrou newCdgrou
  */
 public void setCdgrou(String newCdgrou) { 
 	cdgrou = newCdgrou;
 }
 /**
  * Getter de l'attribut cddrap.
+ * @return String
  */
 public String getCddrap() {
 	return cddrap;
 }
 /**
  * Setter de l'attribut cddrap.
+ * @param newCddrap newCddrap
  */
 public void setCddrap(String newCddrap) { 
 	cddrap = newCddrap;
@@ -44,6 +48,7 @@ protected nc.mairie.technique.BasicBroker definirMyBroker() {
 }
 /**
  Methode à définir dans chaque objet Métier pour instancier un Broker 
+ * @return GroupeDroitsBroker
 */
 protected GroupeDroitsBroker getMyGroupeDroitsBroker() {
 	return (GroupeDroitsBroker)getMyBasicBroker();
@@ -59,7 +64,9 @@ public String toString() {
 }
 /**
  * Retourne un ArrayList d'objet métier : GroupeDroits.
+ * @param aTransaction aTransaction
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public static java.util.ArrayList<GroupeDroits> listerGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	GroupeDroits unGroupeDroits = new GroupeDroits();
@@ -68,7 +75,10 @@ public static java.util.ArrayList<GroupeDroits> listerGroupeDroits(nc.mairie.tec
 
 /**
  * Retourne un ArrayList d'objet métier : GroupeDroits.
+ * @param aTransaction aTransaction
+ * @param droit droit
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public static java.util.ArrayList<GroupeDroits> listerGroupeDroits(nc.mairie.technique.Transaction aTransaction, String droit) throws Exception{
 	GroupeDroits unGroupeDroits = new GroupeDroits();
@@ -81,7 +91,10 @@ public static java.util.ArrayList<GroupeDroits> listerGroupeDroitsfromGroupe(nc.
 }
 /**
  * Retourne un GroupeDroits.
+ * @param aTransaction aTransaction
+ * @param code code
  * @return GroupeDroits
+ * @throws Exception  Exception 
  */
 public static GroupeDroits chercherGroupeDroits(nc.mairie.technique.Transaction aTransaction, String code) throws Exception{
 	GroupeDroits unGroupeDroits = new GroupeDroits();
@@ -95,6 +108,9 @@ public static GroupeDroits chercherGroupeDroits(nc.mairie.technique.Transaction 
 /**
  * Methode creerObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception  Exception 
  */
 public boolean creerGroupeDroits(nc.mairie.technique.Transaction aTransaction )  throws Exception {
 	//Creation du GroupeDroits
@@ -103,6 +119,9 @@ public boolean creerGroupeDroits(nc.mairie.technique.Transaction aTransaction ) 
 /**
  * Methode modifierObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception  Exception 
  */
 public boolean modifierGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	//Modification du GroupeDroits
@@ -111,6 +130,9 @@ public boolean modifierGroupeDroits(nc.mairie.technique.Transaction aTransaction
 /**
  * Methode supprimerObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception  Exception 
  */
 public boolean supprimerGroupeDroits(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	//Suppression de l'GroupeDroits

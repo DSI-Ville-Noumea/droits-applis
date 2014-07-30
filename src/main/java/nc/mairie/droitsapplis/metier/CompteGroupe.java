@@ -86,7 +86,9 @@ public final String toString() {
 }
 /**
  * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * @param aTransaction aTransaction
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public static java.util.ArrayList<CompteGroupe> listerCompteGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	CompteGroupe unCompteGroupe = new CompteGroupe();
@@ -95,7 +97,10 @@ public static java.util.ArrayList<CompteGroupe> listerCompteGroupe(nc.mairie.tec
 
 /**
  * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * @param aTransaction aTransaction
+ * @param sCompte sCompte
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public static java.util.ArrayList<CompteGroupe> listerCompteGroupe(nc.mairie.technique.Transaction aTransaction, String sCompte) throws Exception{
 	CompteGroupe unCompteGroupe = new CompteGroupe();
@@ -104,7 +109,10 @@ public static java.util.ArrayList<CompteGroupe> listerCompteGroupe(nc.mairie.tec
 
 /**
  * Retourne un ArrayList d'objet métier : CompteGroupe.
+ * @param aTransaction aTransaction
+ * @param sGroupe sGroupe
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public static java.util.ArrayList<CompteGroupe> listerCompteGroupefromGroupe(nc.mairie.technique.Transaction aTransaction, String sGroupe) throws Exception{
 	CompteGroupe unCompteGroupe = new CompteGroupe();
@@ -117,7 +125,7 @@ public static java.util.ArrayList<CompteGroupe> listerCompteGroupefromGroupe(nc.
  * @param aTransaction la transaction en cours
  * @param code code du compte recherché
  * @return le groupe recherché
- * @throws Exception 
+ * @throws Exception  Exception 
  */
 public static CompteGroupe chercherCompteGroupe(final Transaction aTransaction, final String code) throws Exception {
 	CompteGroupe unCompteGroupe = new CompteGroupe();
@@ -131,7 +139,7 @@ public static CompteGroupe chercherCompteGroupe(final Transaction aTransaction, 
  * @param sCompte le nom du compte
  * @param cdGrou le code du groupe
  * @return le CompteGroupe cherché
- * @throws Exception 
+ * @throws Exception  Exception 
  */
 public static CompteGroupe chercherCompteGroupe(final Transaction aTransaction, final String sCompte, final String cdGrou) throws Exception {
 	CompteGroupe unCompteGroupe = new CompteGroupe();
@@ -141,6 +149,9 @@ public static CompteGroupe chercherCompteGroupe(final Transaction aTransaction, 
 /**
  * Methode creerObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception  Exception 
  */
 public boolean creerCompteGroupe(nc.mairie.technique.Transaction aTransaction )  throws Exception {
 	//Creation du CompteGroupe
@@ -149,6 +160,9 @@ public boolean creerCompteGroupe(nc.mairie.technique.Transaction aTransaction ) 
 /**
  * Methode modifierObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception  Exception 
  */
 public boolean modifierCompteGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	//Modification du CompteGroupe
@@ -157,6 +171,9 @@ public boolean modifierCompteGroupe(nc.mairie.technique.Transaction aTransaction
 /**
  * Methode supprimerObjetMetier qui retourne
  * true ou false
+ * @param aTransaction aTransaction
+ * @return boolean
+ * @throws Exception  Exception 
  */
 public boolean supprimerCompteGroupe(nc.mairie.technique.Transaction aTransaction) throws Exception{
 	//Suppression de l'CompteGroupe

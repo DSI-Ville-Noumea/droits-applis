@@ -58,7 +58,7 @@ protected java.util.Hashtable<String, BasicRecord> definirMappageTable() throws 
  * 
  * @param aTransaction la transaction en cours
  * @return vrai ou faux si le compte n'est pas créé
- * @throws Exception 
+ * @throws Exception  Exception 
  */
 public final boolean creerCompte(final Transaction aTransaction)  throws Exception {
 	return creer(aTransaction);
@@ -70,7 +70,7 @@ public final boolean creerCompte(final Transaction aTransaction)  throws Excepti
  * 
  * @param aTransaction la transaction en cours
  * @return vrai ou faux si le compte n'est pas modifié
- * @throws Exception 
+ * @throws Exception  Exception 
  */
 public final boolean modifierCompte(final Transaction aTransaction) throws Exception {
 	return modifier(aTransaction);
@@ -82,7 +82,7 @@ public final boolean modifierCompte(final Transaction aTransaction) throws Excep
  * 
  * @param aTransaction la transaction en cours
  * @return vrai ou faux si le compte n'est pas supprimé
- * @throws Exception 
+ * @throws Exception  Exception 
  */
 public final boolean supprimerCompte(final Transaction aTransaction) throws Exception {
 	return supprimer(aTransaction);
@@ -90,7 +90,9 @@ public final boolean supprimerCompte(final Transaction aTransaction) throws Exce
 
 /**
  * Retourne un ArrayList d'objet métier : Compte.
+ * @param aTransaction aTransaction
  * @return java.util.ArrayList
+ * @throws Exception  Exception 
  */
 public java.util.ArrayList<Compte> listerCompte(nc.mairie.technique.Transaction aTransaction) throws Exception {
 	return executeSelectListe(aTransaction,"select * from "+getTable()+" order by LIIDUT asc");
@@ -111,7 +113,7 @@ public java.util.ArrayList<Compte> listerComptesfromGroupeOrderByCode(nc.mairie.
  * @param aTransaction la transaction en cours
  * @param sCompte le nom du compte
  * @return Compte
- * @throws Exception 
+ * @throws Exception  Exception 
  */
 public final Compte chercherCompte(final Transaction aTransaction, final String sCompte) throws Exception {
 	//String requete="select * from "+getTable()+" where upper(CDIDUT) = '"+sCompte+"'";

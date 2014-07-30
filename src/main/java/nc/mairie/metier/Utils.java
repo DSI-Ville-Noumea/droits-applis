@@ -24,8 +24,8 @@ public class Utils {
 	
 	/**
 	 * 
-	 * @param l1
-	 * @param l2
+	 * @param l1 l1
+	 * @param l2 l2
 	 * @return ArrayListe l1 ayant éléminé de la liste l1 les éléments en communs avec l2
 	 * fonctionne uniquement avec une liste l1 n'ayant pas 2 elements identiques
 	 */
@@ -122,8 +122,8 @@ public class Utils {
 	} 
 	/**
 	 * 
-	 * @param l1
-	 * @param l2
+	 * @param l1 l1
+	 * @param e2 e2
 	 * @return ArrayListe l1 ayant éléminé de la liste l1 les elements e2
 	 * 
 	 */
@@ -146,7 +146,7 @@ public class Utils {
 	
 	/**
 	 * 
-	 * @param al
+	 * @param al al
 	 * @return ArrayList entrée moins ses doublons.
 	 */
 	public static ArrayList<Object> antiDoublon(ArrayList<?> al) {
