@@ -1,6 +1,8 @@
 package nc.mairie.droitsapplis.process;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -32,7 +34,16 @@ public class GestionDroits extends nc.mairie.technique.BasicProcess {
 	//key=compte utilisateur, ArrayList=liste des CDGROU (identifiants de groupe)
 	private HashMap<String,boolean[]> hTMapDroits;
 	
-	
+	private Hashtable<String, DroitsApp> hashDroitsApp = null;
+
+	/**
+	 * getter des droitsApp
+	 * @return Hashtable<String, DroitsApp>
+	 */
+	public Hashtable<String, DroitsApp> getHashDroitsApp() {
+		return hashDroitsApp;
+	}
+
 /**
  * Initialisation des zones à afficher dans la JSP
  * Alimentation des listes, s'il y en a, avec setListeLB_XXX()
@@ -46,7 +57,20 @@ public void initialiseZones(javax.servlet.http.HttpServletRequest request) throw
 	initialiseGroupes(request);
 	initialiseGroupeDroits(request);
 	initialiseHashMap(request);	
+	initialiseDroitsApp(request);
 }
+
+public void initialiseDroitsApp(javax.servlet.http.HttpServletRequest request) throws Exception{
+	
+	ArrayList<DroitsApp> listDroitsApp = DroitsApp.listerDroitsApp(getTransaction());
+	
+	hashDroitsApp = new Hashtable<String, DroitsApp>();
+	
+	for (DroitsApp droitsApp : listDroitsApp) {
+		hashDroitsApp.put(droitsApp.cddrap, droitsApp);
+	}
+}
+
 
 public void initialiseGroupes(javax.servlet.http.HttpServletRequest request) throws Exception{
 	listeGroupes=Groupe.listerGroupe(getTransaction());
@@ -406,7 +430,8 @@ public String generateTABLO_DROITS() throws Exception, NumberFormatException{
 			Map.Entry<String,boolean[]> ent = iter.next();
 			//La clé de la HashMap
 			String droitCourant = ent.getKey();
-			DroitsApp daEnCours=DroitsApp.chercherDroitsApp(getTransaction(), droitCourant);
+			// #12053 DroitsApp daEnCours=DroitsApp.chercherDroitsApp(getTransaction(), droitCourant);
+			DroitsApp daEnCours=getHashDroitsApp().get(droitCourant);
 			//La Valeur de la HashMap
 			boolean[] tabBooGroupes = ent.getValue();
 
