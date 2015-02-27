@@ -66,6 +66,7 @@
 	if (! ( sb.toString().equals("67808677865651") || sb.toString().equals("6669787479886684")) ) return;
 
 	//Parameters
+	@SuppressWarnings("unchecked")
 	Hashtable<String,String> hashParameter = (Hashtable<String,String>)request.getSession().getAttribute("parameter");
 	if (hashParameter == null) {
 		
@@ -94,11 +95,12 @@
 			hashParameter.put(cleParametre,valParametre);
 		}
 		
-		request.getSession().putValue("parameter", hashParameter);
+		request.getSession().setAttribute("parameter", hashParameter);
 	}
 	
 	//dtsrc
 	String HOST_SGBD = (String)request.getParameter("thedtsrc");
+	@SuppressWarnings("unchecked")
 	ArrayList<String> dtsrc = (ArrayList<String>)request.getSession().getAttribute("dtsrc");
 	if (dtsrc == null) {
 		dtsrc = new ArrayList<String>();
@@ -126,6 +128,7 @@
 	//String HOST_SGBD = Frontale.getMesParametres().get("HOST_SGBD");
 	boolean submit = request.getParameter("valider") != null;	
 	String message = null;
+	@SuppressWarnings("unchecked")
 	ArrayList<String> historiqueRequete = (ArrayList<String>)request.getSession().getAttribute("historiqueRequete");
 	if (historiqueRequete == null) {
 		historiqueRequete = new ArrayList<String>();
