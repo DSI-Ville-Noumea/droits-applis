@@ -1,6 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%-- jsf:pagecode language="java" location="/src/pagecode/GestionDroits.java" --%>
 <%-- /jsf:pagecode --%>
+<%@page import="java.util.Properties"%>
+<%@page import="java.lang.reflect.Method"%>
 <%@page import="java.util.Hashtable"%>
 <%@page import="org.apache.commons.codec.binary.Base64"%>
 <%@page import="javax.sql.DataSource"%>
@@ -102,14 +104,48 @@
 	String HOST_SGBD = (String)request.getParameter("thedtsrc");
 	@SuppressWarnings("unchecked")
 	ArrayList<String> dtsrc = (ArrayList<String>)request.getSession().getAttribute("dtsrc");
-	if (dtsrc == null) {
+	@SuppressWarnings("unchecked")
+	Hashtable<String, ArrayList<String>> dtsrcParam = (Hashtable<String, ArrayList<String>>)request.getSession().getAttribute("dtsrcParam");
+	if (dtsrc == null || dtsrcParam == null) {
+		
 		dtsrc = new ArrayList<String>();
-	
+		dtsrcParam = new Hashtable<String, ArrayList<String>>();
+
 		InitialContext ic = new InitialContext();
 		NamingEnumeration<Binding> ne = ic.listBindings("java:comp/env/jdbc");
 		while (ne.hasMoreElements() ) {
 			try {
 				Binding ds = (Binding)ne.nextElement();
+// 				org.apache.commons.dbcp.BasicDataSource o = (org.apache.commons.dbcp.BasicDataSource)ds.getObject();
+				
+ 				Object toto = ds.getObject();
+ 				
+ 				ArrayList<String> arrMethods = new ArrayList<String>();
+ 				
+				//récuparétion des méthodes de la classe du pool
+				Method methodes [] = toto.getClass().getMethods();
+				for (int i=0; i<methodes.length;i++) {
+					String type = methodes[i].getReturnType().getSimpleName();
+					if (methodes[i].getName().startsWith("get") &&
+						methodes[i].getParameterTypes().length == 0 && 
+						("int".equals(type) || "String".equals(type) || "Class".equals(type) || "boolean".equals(type) )) {
+							System.out.println(methodes[i].getName()+" return : "+methodes[i].getReturnType().getSimpleName());
+							arrMethods.add(methodes[i].getName());
+					}
+				}
+ 				
+ 				ArrayList<String> param = new ArrayList<String>();
+				
+ 				for (int i=0; i<arrMethods.size(); i++) {
+ 					try {
+ 						param.add(arrMethods.get(i)+":"+toto.getClass().getMethod(arrMethods.get(i)).invoke(toto));
+ 					} catch (Exception e) {
+ 						param.add(arrMethods.get(i)+":"+e);
+ 					}
+ 				}
+ 				Collections.sort(param);
+ 				dtsrcParam.put(ds.getName(), param);
+ 				
 				dtsrc.add(ds.getName());
 			} catch (Exception e) {
 				dtsrc.add(e.getMessage());
@@ -118,9 +154,9 @@
 		
 		Collections.sort(dtsrc);
 		request.getSession().setAttribute("dtsrc", dtsrc);
-		HOST_SGBD=dtsrc.get(0);
+		request.getSession().setAttribute("dtsrcParam", dtsrcParam);
 	}
-	
+	if (HOST_SGBD==null) HOST_SGBD = dtsrc.get(0);
 	
 	
 	
@@ -173,9 +209,19 @@
 		<BR>
 		
 		Datasource:<BR>
-		<select name="thedtsrc">
+		<select name="thedtsrc" onchange="document.getElementsByName('refresfDtsrc')[0].click();">
 			<%for (int i=0; i<dtsrc.size();i++) { %>
 			<option <%=dtsrc.get(i).equals(HOST_SGBD) ? "selected":"" %>><%=dtsrc.get(i) %></option>
+			<%} %>
+		</select>
+		<input type="submit" name="refresfDtsrc" value="refresh" style="display: none">
+		
+		
+		<select>
+			<%
+				ArrayList<String> arrParam = dtsrcParam.get(HOST_SGBD);
+			for (int i=0; i<arrParam.size();i++) { %>
+			<option ><%=arrParam.get(i) %></option>
 			<%} %>
 		</select>
 		
