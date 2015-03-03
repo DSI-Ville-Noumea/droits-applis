@@ -129,7 +129,7 @@
 					if (methodes[i].getName().startsWith("get") &&
 						methodes[i].getParameterTypes().length == 0 && 
 						("int".equals(type) || "String".equals(type) || "Class".equals(type) || "boolean".equals(type) )) {
-							System.out.println(methodes[i].getName()+" return : "+methodes[i].getReturnType().getSimpleName());
+							
 							arrMethods.add(methodes[i].getName());
 					}
 				}
