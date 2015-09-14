@@ -38,7 +38,7 @@ public class GestionDroits extends nc.mairie.technique.BasicProcess {
 
 	/**
 	 * getter des droitsApp
-	 * @return Hashtable<String, DroitsApp>
+	 * @return Hashtable String, DroitsApp
 	 */
 	public Hashtable<String, DroitsApp> getHashDroitsApp() {
 		return hashDroitsApp;
