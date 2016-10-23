@@ -3,4 +3,4 @@
 
 # droits-applis
 
-Gestion des droits des applis.
+Gestion des droits des applis 
