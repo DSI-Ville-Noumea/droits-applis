@@ -55,7 +55,7 @@
 		<droitsapplisclient_version>droits-applis-client-2.5</droitsapplisclient_version>
 		<framework_version>framework-2.6</framework_version>
 		<java.version>1.8</java.version>
-		<versioneye-maven-plugin.version>3.11.1</versioneye-maven-plugin.version>
+		<versioneye-maven-plugin.version>3.11.2</versioneye-maven-plugin.version>
    		<versioneye-maven-plugin.apiKey>${env.VERSIONEYE_APIKEY}</versioneye-maven-plugin.apiKey>
    		<versioneye-maven-plugin.projectId>${env.VERSIONEYE_PROJECTID}</versioneye-maven-plugin.projectId>
    		<servlet-api.version>6.0.51</servlet-api.version>
