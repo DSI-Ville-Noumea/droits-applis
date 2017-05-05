@@ -65,6 +65,8 @@
         <jsf-impl.version>2.2.14</jsf-impl.version>
         <jsf-api.version>2.2.14</jsf-api.version>
         <jt400.version>9.3</jt400.version>
+		<maven-war-plugin.version>3.1.0</maven-war-plugin.version>
+		<maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
 	</properties>
 
 
@@ -163,12 +165,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
+				<version>${maven-surefire-plugin.version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>${maven-war-plugin.version}</version>
 				<configuration>
 					<webResources>
 						<resource>
