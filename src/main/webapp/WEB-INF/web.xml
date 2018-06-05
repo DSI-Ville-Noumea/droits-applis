@@ -6,6 +6,9 @@
                         version="3.0">
 	<display-name>Mairie_DroitsApplis
 	</display-name>
+
+	<distributable/>
+
 	<filter>
 		<filter-name>SetCharacterEncoding</filter-name>
 		<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
